@@ -1,0 +1,106 @@
+.page__title{
+  color:$color-text1;
+}
+
+.page__header{
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 65%,rgba(255,255,255,0) 100%);
+  box-shadow: 0px -5px 8px rgba(0,0,0,0.10);
+  border-radius:3px;
+  margin: -150px auto 0 auto;
+  width: calc(100% - 40px);
+  max-width: calc(1100px - 80px);
+
+  @include for-size(tablet-up){
+      width: calc(100% - 80px);
+  }
+
+  padding: 40px 30px 10px 30px;
+  @include for-size(tablet-up){
+      padding: 50px 50px 20px 50px;
+  }
+  @include for-size(desktop-up){
+      padding: 70px 70px 30px 70px;
+  }
+
+}
+
+.page__title{
+  margin: 0;
+
+  font-size:21px;
+  @include for-size(tablet-up){
+    font-size:24px;
+  }
+  @include for-size(desktop-up){
+    font-size:30px;
+  }
+}
+
+
+
+.page__intro{
+  font-size:18px;
+  font-weight: 300;
+  line-height:130%;
+  color: $color-text2;
+
+  @include for-size(tablet-up){
+    font-size:20px;
+  }
+
+  @include for-size(desktop-up){
+    font-size:22px;
+  }
+
+}
+
+.page__content{
+  @extend .l-contentcontainer;
+
+  h2{
+    font-size: 18px;
+    line-height:30px;
+    font-weight: 600;
+    margin: 30px 0px 20px 0px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+
+
+
+  p, li{
+    font-size:16px;
+    font-weight: 500;
+    color:$color-text2;
+    line-height:150%;
+    @include for-size(tablet-up){
+      font-size: 18px;
+    }
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0px 0px 0px 20px;
+    margin: 0;
+  }
+
+  li{
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+    &:before{
+      position: absolute;
+      content:"";
+      height: 5px;
+      width: 5px;
+      top: 11px;
+      left:0px;
+      transform: skewX(-20deg);
+      background-color: $color-brand;
+    }
+  }
+
+
+}

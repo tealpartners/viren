@@ -1,0 +1,128 @@
+.projects{
+  @extend .l-wrapper;
+  margin-top: 100px;
+}
+
+.projects__image{
+  position: relative;
+  border-bottom: 1px solid $color-brand;
+  text-align: center;
+  overflow: hidden;
+
+  img{
+    width: 80%;
+    position: relative;
+    bottom: -40px;
+  }
+
+  @include for-size(tablet-landscape-up){
+    width: 100%;
+    border:none;
+    overflow: visible;
+    max-height: none;
+
+    img{
+      width: 100%;
+      top:0;
+      bottom: auto;
+    }
+  }
+}
+
+.projects__case{
+  margin-bottom:50px;
+
+  @include for-size(tablet-portrait-up){
+    margin-bottom:80px;
+  }
+
+  @include for-size(tablet-landscape-up){
+    display:-ms-grid;
+    display:grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-column-gap: 60px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.projects__case__title{
+  font-size:20px;
+  color:$color-text1;
+  margin: 30px 0px 10px 0px;
+  @include for-size(tablet-up){
+    font-size: 30px;
+  }
+
+  @include for-size(tablet-landscape-up){
+    margin-top: 0;
+  }
+}
+
+.projects__case__body{
+  font-size:17px;
+  color:$color-text2;
+  line-height:150%;
+  margin: 0;
+  @include for-size(tablet-up){
+    font-size:20px;
+  }
+}
+
+/* ODD/EVEN LEFT/RIGHT */
+.projects__case:nth-child(even){
+  @include for-size(tablet-landscape-up){
+    text-align: right;
+    .projects__case__text{
+      grid-column: 1;
+      grid-row:1;
+      -ms-grid-column: 1;
+      -ms-grid-row: 1;
+    }
+
+    .projects__image{
+      grid-column: 2;
+      grid-row:1;
+      -ms-grid-column: 2;
+      -ms-grid-row: 1;
+    }
+
+  }
+}
+
+.projects__case:nth-child(odd){
+  @include for-size(tablet-landscape-up){
+    text-align: left;
+    .projects__case__text{
+      grid-column: 2;
+      grid-row:1;
+      -ms-grid-column: 2;
+      -ms-grid-row: 1;
+    }
+
+    .projects__image{
+      grid-column: 1;
+      grid-row:1;
+      -ms-grid-column: 1;
+      -ms-grid-row: 1;
+    }
+
+  }
+}
+
+/* IE execptions */
+@media all and (-ms-high-contrast:none)
+{
+  .projects__case:nth-child(odd){
+    .projects__case__text { padding-left: 60px; } /* IE10 */
+    *::-ms-backdrop, .projects__case__text { padding-left: 60px; } /* IE11 */
+  }
+
+  .projects__case:nth-child(even){
+    .projects__case__text { padding-right: 60px; } /* IE10 */
+    *::-ms-backdrop, .projects__case__text { padding-right: 60px; } /* IE11 */
+  }
+
+}

@@ -1,0 +1,44 @@
+.contactinfo{
+  display: -ms-grid;
+  display: grid;
+
+  margin-top:40px;
+
+  font-size:16px;
+  font-weight: 500;
+  color:$color-text2;
+  line-height:150%;
+  @include for-size(tablet-up){
+    font-size: 18px;
+  }
+
+  @include for-size(tablet-up){
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+
+.contactinfo_right img{
+  width: 180px;
+  @include for-size(phone-only){
+      display: none;
+  }
+}
+
+.contactinfo_left{
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.contactinfo_right{
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.contactinfo__name{
+  font-weight:600;
+  //color: $color-text1;
+  color:black;
+}

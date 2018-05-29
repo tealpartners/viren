@@ -1,0 +1,90 @@
+body{
+  font-family: "Enzo";
+  color:$color-text1;
+  font-size:15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  color: $color-text1;
+  font-weight:600;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+a{
+  color:$color-cta;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.page a{
+  border-bottom: 2px solid rgba($color-cta,0.7);
+
+  &:hover{
+    border-bottom: 3px solid rgba($color-cta,1);
+  }
+
+}
+
+@mixin button {
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 42px;
+  color: $color-text1;
+  padding: 0px 20px;
+  display: inline-block;
+
+  @include for-size(tablet-up) {
+    font-size: 17px;
+    border-radius: 5px;
+    line-height: 52px;
+    padding: 0px 30px;
+  }
+}
+
+
+.button__primary{
+  @include button;
+  background: linear-gradient(to right, rgba(65,207,246,1) 0%,rgba(116,225,255,1) 100%);
+  font-weight:600;
+  transition: all 0.1s ease-out;
+  position: relative;
+}
+
+.button__secundary{
+  @include button;
+  background: #fff;
+  font-weight: 400;
+}
+
+.textbutton{
+  color:$color-brand;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  &:hover{
+    color: $color-brand-light;
+    transition: all 0.2s;
+  }
+}
+
+
+.callout{
+  margin-top:60px;
+  text-align: center;
+  .callout__title{
+    font-size:30px;
+  }
+  @include for-size(tablet-landscape-up){
+    margin-top:100px;
+  }
+}

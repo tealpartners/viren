@@ -1,0 +1,110 @@
+.colorband{
+  position: relative;
+  padding: 20px 0px 20px 0px;
+  background: $color-bg-babyblue;
+}
+
+
+.l-header{
+  position: relative;
+  display: -ms-grid;
+  display:grid;
+  z-index: 1;
+
+}
+
+.l-header__logo{
+  -ms-grid-column: 1;
+
+}
+
+.l-header__nav{
+  -ms-grid-column: 2;
+}
+
+.logo{
+
+  justify-self:center;
+  -ms-grid-column-align:center;
+
+  @include for-size(desktop-up){
+    justify-self:start;
+    -ms-grid-column-align:start;
+  }
+
+
+  a{
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 90px;
+    height:41px;
+    background: url(../assets/img/viren-logo.svg) no-repeat left center;
+    background-size: auto 41px;
+
+    @include for-size(tablet-landscape-up){
+      background-size: auto 40px;
+    }
+  }
+}
+
+.top-navigation{
+  display: -ms-grid;
+  display: grid;
+  justify-items: stretch;
+  -ms-grid-columns: 25% 25% 25% 25%;
+}
+
+.top-navigation__item{
+  text-align: center;
+  align-self: center;
+  line-height: 40px;
+  -ms-grid-row:1;
+  grid-row:1;
+}
+
+.top-navigation__item a{
+  color: $color-text2;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+  font-size:14px;
+  @include for-size(tablet-portrait-up){
+    font-size:16px;
+    font-weight:500;
+  };
+
+  @include for-size(desktop-up){
+    font-size:18px;
+  };
+}
+
+
+.top-navigation__item.active{
+  position: relative;
+
+  &:after{
+    position: absolute;
+    content:"";
+    width: 50px;
+    height:4px;
+    left: calc(50% - 25px);
+    bottom: 0;
+    background-color: $color-brand;
+    transform: skewX(-16deg);
+  }
+
+  a{
+    font-weight: 600;
+    color:$color-text1;
+  }
+
+}
+
+
+.top-navigation>div:nth-child(1){-ms-grid-row: 1;  -ms-grid-column: 1;}
+.top-navigation>div:nth-child(2){-ms-grid-row: 1;  -ms-grid-column: 2;}
+.top-navigation>div:nth-child(3){-ms-grid-row: 1;  -ms-grid-column: 3;}
+.top-navigation>div:nth-child(4){-ms-grid-row: 1;  -ms-grid-column: 4;}
+.top-navigation>div:nth-child(5){-ms-grid-row: 1;  -ms-grid-column: 5;}
+.top-navigation>div:nth-child(6){-ms-grid-row: 1;  -ms-grid-column: 6;}

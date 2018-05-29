@@ -1,0 +1,37 @@
+.l-wrapper{
+  max-width: $maxwidth;
+  margin: 0 auto;
+  padding: 0px 20px;
+  @include for-size(tablet-portrait-up){
+    padding: 0px 40px;
+  };
+  @include for-size(desktop-up){
+    padding: 0px;
+  };
+}
+
+
+.l-header{
+  display: -ms-grid;;
+  display: grid;
+
+  @include for-size(desktop-up){
+    -ms-grid-columns: 300px 1fr;
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+
+.l-contentcontainer{
+  margin: 0 auto;
+  width: calc(100% - 100px);
+  max-width: 880px;
+
+  @include for-size(tablet-up){
+    width: calc(100% - 180px);
+  }
+
+  @include for-size(tablet-up){
+    width: calc(100% - 180px);
+  }
+}
