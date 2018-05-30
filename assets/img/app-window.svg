@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="85px" viewBox="0 0 114 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>app window</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-13" transform="translate(-814.000000, -2073.000000)">
+            <g id="animated-illustrating-copy-3" transform="translate(325.687500, 1853.238281)">
+                <g id="New-browser-application" transform="translate(487.528320, 220.394531)">
+                    <g id="app-window">
+                        <path d="M4.92871094,0.001953125 L110.279297,0.001953125 C112.488436,0.001953125 114.279297,1.79281413 114.279297,4.00195312 L114.279297,80.0019531 C114.279297,82.2110921 112.488436,84.0019531 110.279297,84.0019531 L4.92871094,84.0019531 C2.71957194,84.0019531 0.928710938,82.2110921 0.928710938,80.0019531 L0.928710938,4.00195313 C0.928710937,1.79281413 2.71957194,0.001953125 4.92871094,0.001953125 Z M9.08433268,12.8046875 C6.87519368,12.8046875 5.08433268,14.5955485 5.08433268,16.8046875 L5.08433268,74.4248047 C5.08433268,76.6339437 6.87519368,78.4248047 9.08433268,78.4248047 L106.123675,78.4248047 C108.332814,78.4248047 110.123675,76.6339437 110.123675,74.4248047 L110.123675,16.8046875 C110.123675,14.5955485 108.332814,12.8046875 106.123675,12.8046875 L9.08433268,12.8046875 Z" id="Combined-Shape" fill="#E8E8E8"></path>
+                        <circle id="Oval-2" fill="#FFFFFF" cx="106" cy="7" r="2"></circle>
+                        <circle id="Oval-2-Copy" fill="#FFFFFF" cx="100" cy="7" r="2"></circle>
+                        <circle id="Oval-2-Copy-2" fill="#FFFFFF" cx="94" cy="7" r="2"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

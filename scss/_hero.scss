@@ -23,19 +23,8 @@
 
   }
 
-  .hero__right{
-    background-color: #fff;
-    box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    overflow: hidden;
-    transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px);
-    //animation: float 4s ease-in-out infinite alternate;
-
-    img{
+  .hero__right img{
       width: 100%;
-
-    }
-
   }
 
   .hero__left{
@@ -51,6 +40,19 @@
       grid-row:1;
       margin-bottom:0;
     }
+  }
+
+  .hero__right .transformer{
+    transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(-20px);
+    height:calc(450px * 0.675);
+  }
+
+  .hero__right .window{
+    transform-origin: left top;
+    transform: scale(0.675);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
   }
 
 
