@@ -87,8 +87,8 @@ $window-border: rgba(0,0,0,0.1);
     width:82px;
     grid-template-columns: 25% 45% 15% 15%;
     grid-template-rows: 25% 25% 25% 25%;
-    column-gap: 4px;
-    row-gap:4px;
+    grid-column-gap: 4px;
+    grid-row-gap:4px;
 
     .block{
       background-color: #efefef;
@@ -148,7 +148,7 @@ $window-border: rgba(0,0,0,0.1);
   height:30px;
   display: grid;
   grid-template-columns: repeat(15 , 15px);
-  column-gap: 5px;
+  grid-column-gap: 5px;
   transform: translateX(-140px);
   animation: blocks 4s linear infinite;
 
