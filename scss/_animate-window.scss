@@ -322,7 +322,11 @@ $window-border: rgba(0,0,0,0.1);
 .window .title{
   align-self: end;
   justify-self: center;
-  font-size:15px;
+  font-size:18px;
+  @include for-size(tablet-up){
+    font-size:15px;
+  }
+
   font-weight: 600;
   color:rgba(0,0,0,0.2);
   text-transform: uppercase;

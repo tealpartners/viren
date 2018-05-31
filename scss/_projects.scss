@@ -45,6 +45,11 @@
     grid-column-gap: 60px;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+
+    @include for-size(tablet-landscape-up){
+      grid-template-rows: 100px 1fr;
+    }
   }
 }
 
@@ -52,6 +57,7 @@
   font-size:20px;
   color:$color-text1;
   margin: 30px 0px 10px 0px;
+
   @include for-size(tablet-up){
     font-size: 30px;
   }
@@ -71,42 +77,56 @@
   }
 }
 
-/* ODD/EVEN LEFT/RIGHT */
-.projects__case:nth-child(even){
-  @include for-size(tablet-landscape-up){
-    text-align: right;
-    .projects__case__text{
-      grid-column: 1;
-      grid-row:1;
-      -ms-grid-column: 1;
-      -ms-grid-row: 1;
-    }
+.projects__label{
+  grid-row:1;
+  grid-column: 1 / span 2;
 
-    .projects__image{
-      grid-column: 2;
-      grid-row:1;
-      -ms-grid-column: 2;
-      -ms-grid-row: 1;
-    }
+  text-align: center;
+  font-size:15px;
+  color: $color-text3;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 5px;
 
-  }
 }
 
+/* ODD/EVEN LEFT/RIGHT */
 .projects__case:nth-child(odd){
   @include for-size(tablet-landscape-up){
     text-align: left;
     .projects__case__text{
       grid-column: 2;
-      grid-row:1;
+      grid-row:2;
       -ms-grid-column: 2;
-      -ms-grid-row: 1;
+      -ms-grid-row: 2;
     }
 
     .projects__image{
       grid-column: 1;
-      grid-row:1;
+      grid-row:2;
       -ms-grid-column: 1;
-      -ms-grid-row: 1;
+      -ms-grid-row: 2;
+    }
+
+  }
+}
+
+
+.projects__case:nth-child(even){
+  @include for-size(tablet-landscape-up){
+    text-align: right;
+    .projects__case__text{
+      grid-column: 1;
+      grid-row:2;
+      -ms-grid-column: 1;
+      -ms-grid-row: 2;
+    }
+
+    .projects__image{
+      grid-column: 2;
+      grid-row:2;
+      -ms-grid-column: 2;
+      -ms-grid-row: 2;
     }
 
   }

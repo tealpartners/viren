@@ -34,7 +34,7 @@
   .hero__right{
     grid-row: 2;
     margin-top: 40px;
-    margin-bottom:-100px;
+    margin-bottom:-180px;
     @include for-size(tablet-landscape-up){
       margin-top: 0;
       grid-row:1;
@@ -43,13 +43,22 @@
   }
 
   .hero__right .transformer{
-    transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(-20px);
+
+    transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(0px);
+    
+    @include for-size(tablet-up){
+      transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(-20px);
+    }
+
     height:calc(450px * 0.675);
   }
 
   .hero__right .window{
     transform-origin: left top;
-    transform: scale(0.675);
+    transform: scale(0.5) translateX(-78px);
+    @include for-size(tablet-up){
+      transform: scale(0.675);
+    }
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
