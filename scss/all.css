@@ -1389,7 +1389,7 @@ a {
   -ms-grid-rows: 20% 80%;
   grid-template-rows: 20% 80%;
   -ms-grid-row: 2;
-  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   border-left: 1px solid rgba(0, 0, 0, 0.1); }
 
 .gearbox {
