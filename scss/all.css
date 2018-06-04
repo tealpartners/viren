@@ -1109,6 +1109,7 @@ a {
   -ms-grid-column-align: center;
   justify-self: center;
   -ms-flex-item-align: center;
+  -ms-grid-column-align: center;
   -ms-grid-row-align: center;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -1222,7 +1223,7 @@ a {
   height: 30px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15px [15];
+  -ms-grid-columns: 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px 15px;
   grid-template-columns: repeat(15, 15px);
   grid-column-gap: 5px;
   -webkit-transform: translateX(-140px);
