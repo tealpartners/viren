@@ -1395,9 +1395,8 @@ a {
 .gearbox {
   width: 80px;
   height: 130px;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
+  -ms-grid-row-align: center;
   -ms-grid-column-align: center;
   justify-self: center;
   position: relative; }
