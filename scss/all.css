@@ -936,23 +936,14 @@ a {
   width: 100%;
   display: none; }
 
-/* IMAGE FALLBACK FOR IE10 and IE11 */
-@media all and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* IE10+ specific styles go here */
   .window {
     display: none; }
 
   /* IE10 */
   .animation-fallback img {
-    display: block; }
-
-  *::-ms-backdrop .animation-fallback img {
-    display: block; }
-
-  /* IE11 */
-  *::-ms-backdrop .window {
-    display: none; }
-
-  /* IE11 */ }
+    display: block; } }
 .cases {
   perspective: 1000px; }
   @media (min-width: 900px) {
