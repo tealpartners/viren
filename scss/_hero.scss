@@ -95,13 +95,11 @@
   }
 }
 
-@keyframes float {
-  0%{
-    transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px);
-    box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
-  }
-  100%{
-    transform:perspective(1000px) rotateY(-25deg) rotateX(2deg) rotate(2deg) translateX(-20px);
-    box-shadow: 30px 30px 70px rgba(0,0,0,0.2);
-  }
+
+/* IMAGE FALLBACK FOR IE10 and IE11 */
+
+@media all and (-ms-high-contrast:none)
+{
+  .foo { color: green } /* IE10 */
+  *::-ms-backdrop, .foo { color: red } /* IE11 */
 }
