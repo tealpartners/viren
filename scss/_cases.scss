@@ -24,11 +24,14 @@
 @media all and (-ms-high-contrast:none)
 {
 
-    .cases__item.left{ padding-right: 60px; } /* IE10 */
-    *::-ms-backdrop, .cases__item.left { padding-right: 60px; } /* IE11 */
+    .cases__item.left{ padding-right: 30px; } /* IE10 */
+    *::-ms-backdrop, .cases__item.left { padding-right: 30px; } /* IE11 */
 
-    .cases__item.middle{ padding-right: 60px; } /* IE10 */
-    *::-ms-backdrop, .cases__item.middle{ padding-right: 60px; } /* IE11 */
+    .cases__item.middle{ padding-right: 15px; padding-left: 15px; } /* IE10 */
+    *::-ms-backdrop, .cases__item.middle{ padding-right: 15px; padding-left: 15px;} /* IE11 */
+
+    .cases__item.right{  padding-left: 30px; } /* IE10 */
+    *::-ms-backdrop, .cases__item.middle{ padding-left: 30px;} /* IE11 */
 
 }
 
