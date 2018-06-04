@@ -19,6 +19,8 @@
   }
 }
 
+
+
 .case--speed .projects__image img{
   left:25%;
   @include for-size(tablet-up){
@@ -91,7 +93,10 @@
 }
 
 .projects__label{
+  -ms-grid-row:1;
   grid-row:1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
 
   text-align: center;

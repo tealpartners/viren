@@ -4,12 +4,16 @@
   display: -ms-grid;
 
   grid-template-columns: 100% 100%;
+  -ms-grid-columns: 100% 100%;
   @include for-size(tablet-landscape-up){
     grid-template-columns: 55% 45%;
+    -ms-grid-columns: 55% 45%;
   }
 
-
+  -webkit-column-gap: 40px;
   column-gap: 40px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   margin-top:40px;
@@ -29,15 +33,18 @@
 
   .hero__left{
     grid-row:1;
+    -ms-grid-row:1;
   }
 
   .hero__right{
     grid-row: 2;
+    -ms-grid-row: 2;
     margin-top: 40px;
     margin-bottom:-180px;
     @include for-size(tablet-landscape-up){
       margin-top: 0;
       grid-row:1;
+      -ms-grid-row:1;
       margin-bottom:0;
     }
   }

@@ -3,14 +3,22 @@
   perspective: 1000px;
 
   @include for-size(tablet-landscape-up){
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap:100px;
+    grid-row-gap: 40px;
     margin-bottom: 300px;
     margin-top: 100px;
-    grid-row-gap: 40px;
   }
 }
+
+/* IE Grid */
+.cases .cases__item:nth-child(1){-ms-grid-row: 1;  -ms-grid-column: 1;}
+.cases .cases__item:nth-child(2){-ms-grid-row: 1;  -ms-grid-column: 2;}
+.cases .cases__item:nth-child(3){-ms-grid-row: 1;  -ms-grid-column: 3;}
+
 
 
 .cases__heading{

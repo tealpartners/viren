@@ -13,10 +13,15 @@ $window-border: rgba(0,0,0,0.1);
   width: 800px;
   height: 450px;
 
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 25% 75%;
   grid-template-rows: 25% 75%;
   justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #fff;
 
@@ -24,6 +29,8 @@ $window-border: rgba(0,0,0,0.1);
 
 
 .head-viren{
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
   width: 100%;
   height: 100%;
@@ -37,7 +44,10 @@ $window-border: rgba(0,0,0,0.1);
   width: 100%;
   height: 100%;
   border-bottom:1px solid $window-border;
+  display: -ms-grid;
   display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   justify-items: center;
   border-left:1px solid $window-border;
@@ -66,13 +76,18 @@ $window-border: rgba(0,0,0,0.1);
   height: 100%;
   width: 100%;
   position: relative;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 20% 80%;
   grid-template-rows: 20% 80%;
   border-left:1px solid $window-border;
 }
 
 .app-window{
+  -ms-grid-column-align: center;
   justify-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   width: 115px;
   height: 85px;
@@ -82,15 +97,18 @@ $window-border: rgba(0,0,0,0.1);
 
 
   .rows{
+    display: -ms-grid;
     display: grid;
     height:30px;
     width:82px;
+
+    -ms-grid-columns: 25% 45% 15% 15%;
     grid-template-columns: 25% 45% 15% 15%;
+    -ms-grid-rows: 25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25%;
     grid-column-gap: 4px;
     grid-row-gap:4px;
 
-    
 
     .block{
       background-color: #efefef;
@@ -125,10 +143,12 @@ $window-border: rgba(0,0,0,0.1);
 
 
 .blockwrapper{
+  -ms-transform:skewX(-16deg);
   transform:skewX(-16deg);
   width: 147px;
   height:30px;
   overflow: hidden;
+  -ms-grid-row:2;
   grid-row:2;
   position: absolute;
   left:calc(0% - 78px);
@@ -148,12 +168,15 @@ $window-border: rgba(0,0,0,0.1);
 .blocks{
   //width: 140px;
   height:30px;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (15px)[15];
   grid-template-columns: repeat(15 , 15px);
   grid-column-gap: 5px;
+  -webkit-transform: translateX(-140px);
+  -ms-transform: translateX(-140px);
   transform: translateX(-140px);
   animation: blocks 4s linear infinite;
-
 
 
   .block{
@@ -187,8 +210,12 @@ $window-border: rgba(0,0,0,0.1);
   position: relative;
 
   .bars{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
     align-items: stretch;
     justify-items: center;
     width: 50px;
@@ -220,6 +247,7 @@ $window-border: rgba(0,0,0,0.1);
 
       &:nth-child(1){
         &:after{
+          -ms-transform: translateY(0px);
           transform: translateY(0px);
           animation: movedot1 8s ease-in-out infinite;
         }
@@ -227,12 +255,14 @@ $window-border: rgba(0,0,0,0.1);
 
       &:nth-child(2){
         &:after{
+          -ms-transform: translateY(25px);
           transform: translateY(25px);
         }
       }
 
       &:nth-child(3){
         &:after{
+          -ms-transform: translateY(50px);
           transform: translateY(50px);
           animation: movedot2 8s ease-in-out infinite;
         }
@@ -247,11 +277,13 @@ $window-border: rgba(0,0,0,0.1);
 @keyframes movedot1{
   0%, 5%, 65%,100%{
     /* BEGIN STATE */
+    -ms-transform: translateY(0px);
     transform: translateY(0px);
     border-color: $color-icon-dark;
   }
   25%, 45%{
     /* MIDDLE STATE */
+    -ms-transform: translateY(50px);
     transform: translateY(50px);
     border-color: $color-icon-dark;
   }
@@ -263,11 +295,13 @@ $window-border: rgba(0,0,0,0.1);
 @keyframes movedot2{
   0%, 25%, 85%,100%{
     /* BEGIN STATE */
+    -ms-transform: translateY(50px);
     transform: translateY(50px);
     border-color: $color-icon-dark;
   }
   45%, 65%{
     /* MIDDLE STATE */
+    -ms-transform: translateY(0px);
     transform: translateY(0px);
     border-color: $color-icon-dark;
   }
@@ -282,19 +316,23 @@ $window-border: rgba(0,0,0,0.1);
 
 .settings{
   position: relative;
-  justify-self: stretch;
   height:100%;
+  -ms-grid-column-align: stretch;
+  justify-self: stretch;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 20% 80%;
   grid-template-rows: 20% 80%;
 
   .dotcloud{
     position: absolute;
-    grid-row: 2;
     width:183px;
     height:151px;
     top:calc(50% - 75px);
     left:calc(100% - 92px);
     overflow: hidden;
+    -ms-grid-row: 2;
+    grid-row: 2;
 
     &:before{
       position: absolute;
@@ -322,7 +360,10 @@ $window-border: rgba(0,0,0,0.1);
 }
 
 .window .title{
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
   align-self: end;
+  -ms-grid-column-align: center;
   justify-self: center;
   font-size:18px;
   @include for-size(tablet-up){
@@ -336,9 +377,11 @@ $window-border: rgba(0,0,0,0.1);
 
 @keyframes dotslide{
   0%{
+    -ms-transform: translateX(0);
     transform: translateX(0);
   }
   100%{
+    -ms-transform: translateX(183px);
     transform: translateX(183px);
   }
 }
@@ -347,8 +390,11 @@ $window-border: rgba(0,0,0,0.1);
 .gears{
   height: 100%;
   width: 100%;
+  -ms-grid-row-align: center;
   align-self: center;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 20% 80%;
   grid-template-rows: 20% 80%;
   border-left: 1px solid $window-border;
 }
@@ -356,7 +402,10 @@ $window-border: rgba(0,0,0,0.1);
 .gearbox{
   width: 80px;
   height:130px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
+  -ms-grid-column-align: center;
   justify-self: center;
   position: relative;
 }
@@ -391,9 +440,11 @@ $window-border: rgba(0,0,0,0.1);
 
 @keyframes gears{
   0%{
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100%{
+    -ms-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
 }
