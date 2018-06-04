@@ -103,10 +103,20 @@
 }
 
 
-/* IMAGE FALLBACK FOR IE10 and IE11 */
+.animation-fallback img{
+  width: 100%;
+  display: none;
+}
 
+/* IMAGE FALLBACK FOR IE10 and IE11 */
 @media all and (-ms-high-contrast:none)
 {
-  .foo { color: green } /* IE10 */
-  *::-ms-backdrop, .foo { color: red } /* IE11 */
+  .window {
+    display: none;
+  } /* IE10 */
+  .animation-fallback img{
+    display: block;
+  }
+  *::-ms-backdrop, .window { display: none; } /* IE11 */
+  *::-ms-backdrop, .animation-fallback img { display: block; } /* IE11 */
 }

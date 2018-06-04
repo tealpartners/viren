@@ -932,14 +932,25 @@ a {
       margin-right: 15px;
       text-align: left; }
 
+.animation-fallback img {
+  width: 100%;
+  display: none; }
+
 /* IMAGE FALLBACK FOR IE10 and IE11 */
 @media all and (-ms-high-contrast: none) {
-  .foo {
-    color: green; }
+  .window {
+    display: none; }
 
   /* IE10 */
-  *::-ms-backdrop, .foo {
-    color: red; }
+  .animation-fallback img {
+    display: block; }
+
+  *::-ms-backdrop, .window {
+    display: none; }
+
+  /* IE11 */
+  *::-ms-backdrop, .animation-fallback img {
+    display: block; }
 
   /* IE11 */ }
 .cases {
@@ -1063,7 +1074,6 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   display: -ms-grid;
   display: grid;
-  display: -ms-grid;
   align-items: center;
   justify-items: center; }
 
