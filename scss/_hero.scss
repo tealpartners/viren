@@ -23,9 +23,6 @@
     margin-bottom:80px;
   }
 
-  .hero__left{
-
-  }
 
   .hero__right img{
       width: 100%;
@@ -104,6 +101,11 @@
   }
 }
 
+@media all and (-ms-high-contrast:none) {
+  .hero__left{
+    padding-right: 50px;
+  }
+}
 
 .animation-fallback img{
   width: 100%;
@@ -111,19 +113,11 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  /* IE10+ specific styles go here */
-  .window {
-    display: none;
-  } /* IE10 */
-
   .animation-fallback img{
     display: block;
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .red{color: red}
-}
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   html body .window {
