@@ -118,3 +118,11 @@
     display: block;
   }
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .red{color: red}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .window{display: none;}
+}
