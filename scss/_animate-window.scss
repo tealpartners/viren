@@ -52,6 +52,7 @@ $window-border: rgba(0,0,0,0.1);
   align-items: center;
   justify-items: center;
   -ms-grid-row:1;
+  -ms-grid-column:2;
   border-left:1px solid $window-border;
 
 }
@@ -358,6 +359,8 @@ $window-border: rgba(0,0,0,0.1);
   display: grid;
   -ms-grid-rows: 20% 80%;
   grid-template-rows: 20% 80%;
+  -ms-grid-row:2;
+
 
   .dotcloud{
     position: absolute;
@@ -435,6 +438,10 @@ $window-border: rgba(0,0,0,0.1);
   display: grid;
   -ms-grid-rows: 20% 80%;
   grid-template-rows: 20% 80%;
+
+  -ms-grid-row:2;
+  -ms-grid-row:1;
+
   border-left: 1px solid $window-border;
 }
 

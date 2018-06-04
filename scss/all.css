@@ -1076,6 +1076,7 @@ a {
   align-items: center;
   justify-items: center;
   -ms-grid-row: 1;
+  -ms-grid-column: 2;
   border-left: 1px solid rgba(0, 0, 0, 0.1); }
 
 /* HEAD LOGO */
@@ -1323,7 +1324,8 @@ a {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 20% 80%;
-  grid-template-rows: 20% 80%; }
+  grid-template-rows: 20% 80%;
+  -ms-grid-row: 2; }
   .settings .dotcloud {
     position: absolute;
     width: 183px;
@@ -1385,6 +1387,8 @@ a {
   display: grid;
   -ms-grid-rows: 20% 80%;
   grid-template-rows: 20% 80%;
+  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   border-left: 1px solid rgba(0, 0, 0, 0.1); }
 
 .gearbox {
