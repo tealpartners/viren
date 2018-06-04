@@ -32,6 +32,7 @@ $window-border: rgba(0,0,0,0.1);
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
+  -ms-grid-row:1;
   width: 100%;
   height: 100%;
   border-bottom:1px solid $window-border;
@@ -50,7 +51,9 @@ $window-border: rgba(0,0,0,0.1);
   -ms-flex-align: center;
   align-items: center;
   justify-items: center;
+  -ms-grid-row:1;
   border-left:1px solid $window-border;
+
 }
 
 /* HEAD LOGO */
@@ -79,6 +82,8 @@ $window-border: rgba(0,0,0,0.1);
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 20% 80%;
+  -ms-grid-row:2;
+  -ms-grid-column:3;
   grid-template-rows: 20% 80%;
   border-left:1px solid $window-border;
 }
@@ -88,6 +93,8 @@ $window-border: rgba(0,0,0,0.1);
   justify-self: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
+  -ms-grid-row:2;
+  -ms-grid-column:1;
   align-self: center;
   width: 115px;
   height: 85px;
@@ -119,21 +126,47 @@ $window-border: rgba(0,0,0,0.1);
       background-color: $color-brand;
       animation: row1 6s linear infinite;
     }
-
   }
+
+  .block:nth-child(1){-ms-grid-row:1;-ms-grid-column: 1}
+  .block:nth-child(2){-ms-grid-row:1;-ms-grid-column: 2}
+  .block:nth-child(3){-ms-grid-row:1;-ms-grid-column: 3}
+  .block:nth-child(4){-ms-grid-row:1;-ms-grid-column: 4}
+
+  .block:nth-child(5){-ms-grid-row:2;-ms-grid-column: 1}
+  .block:nth-child(6){-ms-grid-row:2;-ms-grid-column: 2}
+  .block:nth-child(7){-ms-grid-row:2;-ms-grid-column: 3}
+  .block:nth-child(8){-ms-grid-row:2;-ms-grid-column: 4}
+
+  .block:nth-child(9){-ms-grid-row:2;-ms-grid-column: 1}
+  .block:nth-child(10){-ms-grid-row:2;-ms-grid-column: 2}
+  .block:nth-child(11){-ms-grid-row:2;-ms-grid-column: 3}
+  .block:nth-child(12){-ms-grid-row:2;-ms-grid-column: 4}
+
+  .block:nth-child(13){-ms-grid-row:2;-ms-grid-column: 1}
+  .block:nth-child(14){-ms-grid-row:2;-ms-grid-column: 2}
+  .block:nth-child(15){-ms-grid-row:2;-ms-grid-column: 3}
+  .block:nth-child(16){-ms-grid-row:2;-ms-grid-column: 4}
+
 }
+
+
 
 @keyframes row1{
   0%,25%{
+    -ms-grid-row: 1;
     grid-row: 1;
   }
   26%,50%{
+    -ms-grid-row: 2;
     grid-row: 2;
   }
   51%,76%{
+    -ms-grid-row: 3;
     grid-row: 3;
   }
   77%,100%{
+    -ms-grid-row: 4;
     grid-row: 4;
   }
 }
@@ -217,9 +250,11 @@ $window-border: rgba(0,0,0,0.1);
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+
     justify-items: center;
     width: 50px;
     height:50px;
+
 
     position: absolute;
     left: calc(50% - 30px);
@@ -370,10 +405,14 @@ $window-border: rgba(0,0,0,0.1);
     font-size:15px;
   }
 
+  -ms-grid-column: 1;
+  -ms-grid-row:1;
+
   font-weight: 600;
   color:rgba(0,0,0,0.2);
   text-transform: uppercase;
 }
+
 
 @keyframes dotslide{
   0%{
