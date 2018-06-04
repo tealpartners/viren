@@ -948,7 +948,7 @@ a {
   .red {
     color: red; } }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .window {
+  html body .window {
     display: none; } }
 .cases {
   perspective: 1000px; }
