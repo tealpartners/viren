@@ -117,6 +117,7 @@
   .animation-fallback img{
     display: block;
   }
-  *::-ms-backdrop, .window { display: none; } /* IE11 */
   *::-ms-backdrop, .animation-fallback img { display: block; } /* IE11 */
 }
+
+*::-ms-backdrop, .window { display: none; } /* IE11 */
