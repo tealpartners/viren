@@ -34,6 +34,7 @@
   .hero__left{
     grid-row:1;
     -ms-grid-row:1;
+    -ms-grid-column: 1;
   }
 
   .hero__right{
@@ -45,6 +46,7 @@
       margin-top: 0;
       grid-row:1;
       -ms-grid-row:1;
+      -ms-grid-column: 2;
       margin-bottom:0;
     }
   }
