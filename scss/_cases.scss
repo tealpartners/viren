@@ -9,7 +9,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap:100px;
     grid-row-gap: 40px;
-    margin-bottom: 300px;
+    margin-bottom: 80px;
     margin-top: 100px;
   }
 }
@@ -23,7 +23,6 @@
 /* IE execptions */
 @media all and (-ms-high-contrast:none)
 {
-
     .cases__item.left{ padding-right: 30px; } /* IE10 */
     *::-ms-backdrop, .cases__item.left { padding-right: 30px; } /* IE11 */
 

@@ -851,10 +851,11 @@ a {
     .projects__case:nth-child(even) *::-ms-backdrop, .projects__case:nth-child(even) .projects__image {
       padding-left: 60px; } }
 .hero {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   display: -ms-grid;
   grid-template-columns: 100% 100%;
-  -ms-grid-columns: 100% 100%;
   -webkit-column-gap: 40px;
   column-gap: 40px;
   -webkit-box-align: center;
@@ -862,7 +863,7 @@ a {
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px; }
-  @media (min-width: 600px) {
+  @media (min-width: 900px) {
     .hero {
       grid-template-columns: 50% 50%;
       -ms-grid-columns: 50% 50%; } }
@@ -875,13 +876,21 @@ a {
   .hero .hero__left {
     grid-row: 1;
     -ms-grid-row: 1;
-    -ms-grid-column: 1; }
+    -ms-grid-column: 1;
+    padding: 0px 20px; }
+    @media (min-width: 600px) {
+      .hero .hero__left {
+        padding: 0px 40px; } }
+    @media (min-width: 1100px) {
+      .hero .hero__left {
+        padding: 0px; } }
   .hero .hero__right {
     grid-row: 2;
     -ms-grid-row: 2;
     margin-top: 40px;
-    margin-bottom: -180px; }
-    @media (min-width: 600px) {
+    margin-bottom: -180px;
+    align-self: start; }
+    @media (min-width: 900px) {
       .hero .hero__right {
         margin-top: 0;
         grid-row: 1;
@@ -889,8 +898,7 @@ a {
         -ms-grid-column: 2;
         margin-bottom: 0; } }
   .hero .hero__right .transformer {
-    margin-left: -210px;
-    transform-origin: 50% 50%;
+    transform-origin: 100% 50%;
     /* transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(0px);
     
     @include for-size(tablet-up){
@@ -903,14 +911,13 @@ a {
     */
     height: calc(450px * 0.675); }
   .hero .hero__right .window {
-    transform-origin: 50% 0%;
-    transform: scale(0.5);
+    transform-origin: 0% 0%;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.2); }
-    @media (min-width: 900px) {
+    @media (min-width: 600px) {
       .hero .hero__right .window {
-        transform: scale(0.6); } }
+        transform: scale(0.4); } }
     @media (min-width: 1100px) {
       .hero .hero__right .window {
         transform: scale(0.675); } }
@@ -959,7 +966,7 @@ a {
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: 100px;
       grid-row-gap: 40px;
-      margin-bottom: 300px;
+      margin-bottom: 80px;
       margin-top: 100px; } }
 
 /* IE Grid */
