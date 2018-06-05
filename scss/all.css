@@ -430,14 +430,6 @@ template {
     .l-wrapper, .projects, .cases {
       padding: 0px; } }
 
-.l-header {
-  display: -ms-grid;
-  display: grid; }
-  @media (min-width: 1100px) {
-    .l-header {
-      -ms-grid-columns: 300px 1fr;
-      grid-template-columns: 300px 1fr; } }
-
 .l-contentcontainer, .page__content {
   margin: 0 auto;
   width: calc(100% - 100px);
@@ -541,7 +533,8 @@ a {
   z-index: 1; }
 
 .l-header__logo {
-  -ms-grid-column: 1; }
+  -ms-grid-column: 1;
+  justify-self: center; }
 
 .l-header__nav {
   -ms-grid-column: 2; }
@@ -549,17 +542,13 @@ a {
 .logo {
   justify-self: center;
   -ms-grid-column-align: center; }
-  @media (min-width: 1100px) {
-    .logo {
-      justify-self: start;
-      -ms-grid-column-align: start; } }
   .logo a {
     display: block;
     text-indent: -9999px;
     overflow: hidden;
-    width: 90px;
+    width: 200px;
     height: 41px;
-    background: url(../assets/img/viren-logo.svg) no-repeat left center;
+    background: url(../assets/img/logo-viren-payroll.svg) no-repeat left center;
     background-size: auto 41px; }
     @media (min-width: 900px) {
       .logo a {
@@ -873,10 +862,10 @@ a {
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px; }
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     .hero {
-      grid-template-columns: 55% 45%;
-      -ms-grid-columns: 55% 45%; } }
+      grid-template-columns: 50% 50%;
+      -ms-grid-columns: 50% 50%; } }
   @media (min-width: 900px) {
     .hero {
       margin-top: 80px;
@@ -892,7 +881,7 @@ a {
     -ms-grid-row: 2;
     margin-top: 40px;
     margin-bottom: -180px; }
-    @media (min-width: 900px) {
+    @media (min-width: 600px) {
       .hero .hero__right {
         margin-top: 0;
         grid-row: 1;
@@ -900,18 +889,29 @@ a {
         -ms-grid-column: 2;
         margin-bottom: 0; } }
   .hero .hero__right .transformer {
-    transform: perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(0px);
+    margin-left: -210px;
+    transform-origin: 50% 50%;
+    /* transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(0px);
+    
+    @include for-size(tablet-up){
+      transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-40px) translateY(15px);
+    }
+
+    @include for-size(tablet-landscape-up){
+      transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-60px) translateY(-20px);
+    }
+    */
     height: calc(450px * 0.675); }
-    @media (min-width: 600px) {
-      .hero .hero__right .transformer {
-        transform: perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(-20px); } }
   .hero .hero__right .window {
-    transform-origin: left top;
-    transform: scale(0.5) translateX(-78px);
+    transform-origin: 50% 0%;
+    transform: scale(0.5);
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.2); }
-    @media (min-width: 600px) {
+    @media (min-width: 900px) {
+      .hero .hero__right .window {
+        transform: scale(0.6); } }
+    @media (min-width: 1100px) {
       .hero .hero__right .window {
         transform: scale(0.675); } }
   .hero .hero__title {
@@ -1467,5 +1467,18 @@ a {
   100% {
     -ms-transform: rotate(-360deg);
     transform: rotate(-360deg); } }
+.footer {
+  background-color: #D3F5EF; }
+  .footer .l-wrapper, .footer .projects, .footer .cases {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    @media (min-width: 600px) {
+      .footer .l-wrapper, .footer .projects, .footer .cases {
+        padding-top: 40px;
+        padding-bottom: 40px; } }
+    @media (min-width: 1100px) {
+      .footer .l-wrapper, .footer .projects, .footer .cases {
+        padding-left: 0px;
+        padding-right: 0px; } }
 
 /*# sourceMappingURL=all.css.map */

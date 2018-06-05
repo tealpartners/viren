@@ -5,9 +5,9 @@
 
   grid-template-columns: 100% 100%;
   -ms-grid-columns: 100% 100%;
-  @include for-size(tablet-landscape-up){
-    grid-template-columns: 55% 45%;
-    -ms-grid-columns: 55% 45%;
+  @include for-size(tablet-up){
+    grid-template-columns: 50% 50%;
+    -ms-grid-columns: 50% 50%;
   }
 
   -webkit-column-gap: 40px;
@@ -39,7 +39,8 @@
     -ms-grid-row: 2;
     margin-top: 40px;
     margin-bottom:-180px;
-    @include for-size(tablet-landscape-up){
+
+    @include for-size(tablet-up){
       margin-top: 0;
       grid-row:1;
       -ms-grid-row:1;
@@ -50,21 +51,32 @@
 
   .hero__right .transformer{
 
-    transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(0px);
+    margin-left: -210px;
+
+    transform-origin: 50% 50%;
+    //transform: rotateY(30deg);
+
+    /* transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(0px);
     
     @include for-size(tablet-up){
-      transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(-20px);
+      transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-40px) translateY(15px);
     }
+
+    @include for-size(tablet-landscape-up){
+      transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-60px) translateY(-20px);
+    }
+    */
 
     height:calc(450px * 0.675);
   }
 
   .hero__right .window{
-    transform-origin: left top;
-    transform: scale(0.5) translateX(-78px);
-    @include for-size(tablet-up){
-      transform: scale(0.675);
-    }
+    transform-origin: 50% 0%;
+    transform: scale(0.5);
+
+    @include for-size(tablet-landscape-up){  transform: scale(0.6); }
+    @include for-size(desktop-up){  transform: scale(0.675); }
+
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 40px 40px 80px rgba(0,0,0,0.2);

@@ -11,16 +11,6 @@
 }
 
 
-.l-header{
-  display: -ms-grid;;
-  display: grid;
-
-  @include for-size(desktop-up){
-    -ms-grid-columns: 300px 1fr;
-    grid-template-columns: 300px 1fr;
-  }
-}
-
 
 .l-contentcontainer{
   margin: 0 auto;

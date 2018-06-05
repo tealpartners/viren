@@ -2,8 +2,11 @@
     <title>Viren</title>
     <meta name="description" content="Viren">
     <link rel="stylesheet" href="scss/all.css">
-    <meta name="viewport" content="initial-scale=1">
-    <script src="js/browserselector.js"></script>
+    <meta name="viewport" content="initial-scale=1" >
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/viren.js"></script>
 
 </head>
 
@@ -13,12 +16,15 @@
     <div class="l-wrapper">
         <div class="l-header">
             <div class="l-header__logo logo"><a href="index.html">Viren</a></div>
+
+            <!--
             <nav class="l-header__nav top-navigation">
                 <div class="top-navigation__item active"><a href="#">Payroll</a></div>
                 <div class="top-navigation__item"><a href="#">Tax</a></div>
                 <div class="top-navigation__item"><a href="#">Insurance</a></div>
                 <div class="top-navigation__item"><a href="#">Finance</a></div>
             </nav>
+            -->
         </div>
         <div class="hero">
             <div class="hero__left">
@@ -35,7 +41,7 @@
             </div>
             <div class="hero__right">
                 <div class="transformer">
-                    <div class="window">
+                    <div class="window js-window">
                         <div class="head-viren">
                             <div class="head-viren__logo"></div>
                         </div>
@@ -242,34 +248,36 @@
 
 
 <footer class="footer">
-    <div class="footer__contact">
-        <h2 class="footer__title" id="#contact">
-            Get in touch
-        </h2>
-        <p class="footer__text">
-            Like our software, our customers approach is tailor-made. Do you have general questions or like an in-depth converstation about our product?
-            <br><br>
+    <div class="l-wrapper">
+        <div class="footer__contact">
+            <h2 class="footer__title" id="#contact">
+                Get in touch
+            </h2>
+            <p class="footer__text">
+                Like our software, our customers approach is tailor-made. Do you have general questions or like an in-depth converstation about our product?
+                <br><br>
 
-            We are happy to invite you for some coffee!<br><br>
+                We are happy to invite you for some coffee!<br><br>
 
-            Please contact us at<br><br>
-        </p>
-        <p class="footer__boldinfo">
-            +32 292 2I 21
-            info@viren.be
-        </p>
-    </div>
-    <div class="footer__about">
-        <h2 class="footer__title" id="#contact">
-            About
-        </h2>
-        <p class="footer__text">
-            Viren is a product by <a href="www.tealpartners.com">Teal Partners</a> based in Antwerp, Belgium.<br><br><br><br>
+                Please contact us at<br><br>
+            </p>
+            <p class="footer__boldinfo">
+                +32 292 2I 21
+                info@viren.be
+            </p>
+        </div>
+        <div class="footer__about">
+            <h2 class="footer__title" id="#contact">
+                About
+            </h2>
+            <p class="footer__text">
+                Viren is a product by <a href="www.tealpartners.com">Teal Partners</a> based in Antwerp, Belgium.<br><br><br><br>
 
-            We take on complex projects with a result driven mindset and a start-up chemistry, delivering
-            high-performing web applications in scalable cloud environments.
-            <br><br>
-        </p>
+                We take on complex projects with a result driven mindset and a start-up chemistry, delivering
+                high-performing web applications in scalable cloud environments.
+                <br><br>
+            </p>
+        </div>
     </div>
 </footer>
 

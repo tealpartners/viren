@@ -15,7 +15,7 @@
 
 .l-header__logo{
   -ms-grid-column: 1;
-
+  justify-self: center;
 }
 
 .l-header__nav{
@@ -26,20 +26,14 @@
 
   justify-self:center;
   -ms-grid-column-align:center;
-
-  @include for-size(desktop-up){
-    justify-self:start;
-    -ms-grid-column-align:start;
-  }
-
-
+  
   a{
     display: block;
     text-indent: -9999px;
     overflow: hidden;
-    width: 90px;
+    width: 200px;
     height:41px;
-    background: url(../assets/img/viren-logo.svg) no-repeat left center;
+    background: url(../assets/img/logo-viren-payroll.svg) no-repeat left center;
     background-size: auto 41px;
 
     @include for-size(tablet-landscape-up){
