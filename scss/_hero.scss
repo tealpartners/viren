@@ -47,12 +47,18 @@
     grid-row:1;
     -ms-grid-row:1;
     -ms-grid-column: 1;
-
+    text-align: center;
     padding: 0px 20px;
 
     @include for-size(tablet-portrait-up){
       padding: 0px 40px;
     };
+
+    @include for-size(tablet-landscape-up){
+        text-align: left;
+    }
+
+
     @include for-size(desktop-up){
       padding: 0px;
     };
@@ -103,9 +109,9 @@
 
 
   .hero__title{
-    font-size:20px;
+    font-size:24px;
     margin: 0;
-    @include for-size(tablet-landscape-up) {
+    @include for-size(tablet-portrait-up) {
       font-size: 30px;
     }
   }

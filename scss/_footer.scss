@@ -70,30 +70,39 @@
   }
 }
 
-.footer__cta{
-  color:#fff;
-  display: inline-block;
-  font-weight: 600;
-  background-color: rgba($color-brand-dark,0.4);
-  border-radius:6px;
 
-  font-size:16px;
-  padding: 0px 15px;
-  line-height:46px;
-  margin-right:15px;
-  margin-bottom:15px;
+.footer__cta-wrap{
+  display: grid;
+  display: -ms-grid;
 
-  @include for-size(tablet-landscape-up){
-    font-size:20px;
-    padding: 0px 20px;
-    line-height:50px;
-    margin-right:20px;
-  }
-
-  &:last-child{
-    margin:0;
-  }
+  grid-template-columns: 1fr;
+  grid-row-gap:15px;
   
+  @include for-size(tablet-landscape-up){
+      grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+.footer__cta{
+
+  .label{
+    font-weight: 500;
+    font-size:14px;
+    color:$color-brand;
+  }
+
+  .value{
+    color:$color-text1;
+    font-size:18px;
+    line-height:30px;
+
+    @include for-size(tablet-landscape-up){
+      font-size:22px;
+      line-height:40px;
+    }
+  }
+
 }
 
 
