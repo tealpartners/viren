@@ -1294,9 +1294,8 @@ a {
   -ms-grid-columns: 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px;
   grid-template-columns: repeat(15, 12px);
   grid-column-gap: 3px;
-  -webkit-transform: translateX(-140px);
-  -ms-transform: translateX(-140px);
-  transform: translateX(-140px);
+  -ms-transform: translateX(-112px);
+  transform: translateX(-112px);
   animation: blocks 4s linear infinite; }
   .blocks .block {
     background-color: #efefef;
@@ -1307,7 +1306,7 @@ a {
 
 @keyframes blocks {
   0% {
-    transform: translateX(-140px); }
+    transform: translateX(-104px); }
   100% {
     transform: translateX(0px); } }
 /* -------- SLIDERS --------- */

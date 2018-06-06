@@ -211,9 +211,8 @@ $window-border: rgba(0,0,0,0.1);
   -ms-grid-columns: 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px 12px;
   grid-template-columns: repeat(15 , 12px);
   grid-column-gap: 3px;
-  -webkit-transform: translateX(-140px);
-  -ms-transform: translateX(-140px);
-  transform: translateX(-140px);
+  -ms-transform: translateX(-112px);
+  transform: translateX(-112px);
   animation: blocks 4s linear infinite;
 
 
@@ -231,7 +230,7 @@ $window-border: rgba(0,0,0,0.1);
 
 @keyframes blocks{
   0%{
-    transform: translateX(-140px);
+    transform: translateX(-104px);
   }
   100%{
     transform: translateX(0px);
