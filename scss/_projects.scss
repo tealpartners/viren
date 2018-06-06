@@ -1,6 +1,9 @@
 .projects{
   @extend .l-wrapper;
   margin-top: 100px;
+  @include for-size(tablet-landscape-up){
+    margin-top: 60px;
+  }
 }
 
 .projects__image{
@@ -68,7 +71,7 @@
 
 
     @include for-size(tablet-landscape-up){
-      grid-template-rows: 100px 1fr;
+      grid-template-rows: auto auto;
     }
   }
 }
@@ -77,6 +80,7 @@
   font-size: 20px;
   color: $color-text1;
   margin: 0px 0px 30px 0px;
+  align-self: end;
   @include for-size(tablet-landscape-up){
     font-size: 26px;
   }
@@ -87,6 +91,7 @@
   color:$color-text2;
   line-height:150%;
   margin: 0;
+  align-self: start;
   @include for-size(tablet-up){
     font-size:20px;
   }

@@ -1,20 +1,99 @@
 .footer{
   background-color: $color-bg-babyblue;
+  
+  
+  @include for-size(tablet-up){
+    background-image: url(../assets/img/footer-decoreator.svg);
+    background-size: 370px 975px;
+    background-position: center center;
+    background-repeat: no-repeat;
 
-  .l-wrapper{
-    padding-top: 20px;
-    padding-bottom: 20px;
+  }
+
+
+  .footer__wrapper{
+    max-width: $maxwidth;
+    margin: 0 auto;
+
+    padding: 40px;
+
+    display: grid;
+    display: -ms-grid;
+
+    grid-template-columns: 1fr;
+    grid-row-gap:60px;
+
 
     @include for-size(tablet-portrait-up){
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap:60px;
     };
     @include for-size(desktop-up){
-      padding-left: 0px;
-      padding-right: 0px;
+      padding: 100px 0px 100px 0px;
+      grid-column-gap:300px;
     };
   }
 }
 
+
+.footer__title{
+  margin: 0px 0px 30px 0px;
+  font-size:26px;
+  
+  @include for-size(tablet-up){
+    font-size:28px;
+  }
+
+  @include for-size(desktop-up){
+    font-size:40px;
+  }
+}
+
+
+.footer__text{
+  color: $color-text2;
+  font-weight: 400;
+
+  line-height:140%;
+  font-size: 16px;
+
+  @include for-size(tablet-landscape-up){
+    font-size:18px;
+  }
+  
+
+  @include for-size(desktop-up){
+    font-size:20px;
+
+  }
+}
+
+.footer__cta{
+  color:#fff;
+  display: inline-block;
+  font-weight: 600;
+  background-color: rgba($color-brand-dark,0.4);
+  border-radius:6px;
+
+  font-size:16px;
+  padding: 0px 15px;
+  line-height:46px;
+  margin-right:15px;
+  margin-bottom:15px;
+
+  @include for-size(tablet-landscape-up){
+    font-size:20px;
+    padding: 0px 20px;
+    line-height:50px;
+    margin-right:20px;
+  }
+
+  &:last-child{
+    margin:0;
+  }
+  
+}
 
 
