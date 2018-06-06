@@ -5,11 +5,12 @@
 
   display: grid;
   display: -ms-grid;
-  grid-template-columns: 100% 100%;
+  grid-template-columns: 1fr;
+  justify-items: center;
 
   @include for-size(tablet-landscape-up){
-    grid-template-columns: 50% 50%;
-    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
   }
 
   -webkit-column-gap: 40px;
@@ -19,7 +20,13 @@
   align-items: center;
 
   margin-top:40px;
-  margin-bottom:40px;
+  margin-bottom:0px;
+
+  @include for-size(tablet-up){
+    margin-top:70px;
+    margin-bottom:70px;
+  }
+
   @include for-size(tablet-landscape-up){
     margin-top:80px;
     margin-bottom:80px;
@@ -36,6 +43,7 @@
     -ms-grid-column: 1;
 
     padding: 0px 20px;
+
     @include for-size(tablet-portrait-up){
       padding: 0px 40px;
     };
@@ -51,6 +59,7 @@
     margin-top: 40px;
     margin-bottom:-180px;
     align-self: start;
+    perspective: 2000px;
 
     @include for-size(tablet-landscape-up){
       margin-top: 0;
@@ -61,31 +70,21 @@
     }
   }
 
-  .hero__right .transformer{
+  .hero__right .window-wrapper{
+    width:320px;
 
-    transform-origin: 100% 50%;
-    //transform: perspective(1000px) rotateY(-25deg);
-
-    /* transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-20px) translateY(0px);
-    
     @include for-size(tablet-up){
-      transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-40px) translateY(15px);
+        width: 400px;
     }
 
-    @include for-size(tablet-landscape-up){
-      transform:perspective(1000px) rotateY(-30deg) rotateX(2deg) rotate(2deg) translateX(-60px) translateY(-20px);
-    }
-    */
-
-    height:calc(450px * 0.675);
   }
 
   .hero__right .window{
     transform-origin: 0% 0%;
-    //transform: scale(0.3); // bare default, get overwritten by JS
-
-    @include for-size(tablet-up){  transform: scale(0.4); }
-    @include for-size(desktop-up){  transform: scale(0.675); }
+    transform: scale(0.6) rotateY(-20deg);
+    @include for-size(tablet-up){  transform: scale(0.8) rotateY(-20deg)}
+    @include for-size(tablet-landscape-up){  transform: scale(1) rotateY(-20deg)}
+    @include for-size(desktop-up){  transform: scale(1) rotateY(-20deg) }
 
     background-color: #fff;
     border-radius: 5px;

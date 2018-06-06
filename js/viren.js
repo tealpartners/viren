@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    rescale();
+    //rescale();
 })
 
 function rescale(){
@@ -15,7 +15,7 @@ function rescale(){
     }
 
     if (vp_width > 600 && vp_width < 900){
-        
+
     }
 
     if (vp_width > 900 && vp_width < 1100){
@@ -29,5 +29,5 @@ function rescale(){
 }
 
 $( window ).resize(function() {
-    rescale();
+    //rescale();
 });
