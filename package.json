@@ -1,0 +1,25 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server .",
+    "build": "node compile-sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tealpartners/website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tealpartners/website/issues"
+  },
+  "homepage": "https://github.com/tealpartners/website#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "node-sass": "^4.9.0"
+  }
+}
