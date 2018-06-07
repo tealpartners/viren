@@ -96,6 +96,7 @@
   }
 
   .hero__right .window{
+    -ms-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
     transform: scale(0.6) rotateY(-20deg);
     @include for-size(tablet-up){  transform: scale(0.8) rotateY(-20deg)}
