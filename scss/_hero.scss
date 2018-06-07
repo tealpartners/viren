@@ -9,9 +9,10 @@
   grid-template-columns: 1fr;
   justify-items: center;
 
+
   @include for-size(tablet-landscape-up){
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 0.46fr 0.54fr;
+    -ms-grid-columns: 0.46fr 0.54fr;
   }
 
   -webkit-column-gap: 40px;
@@ -24,18 +25,17 @@
   margin-bottom:0px;
 
   @include for-size(tablet-up){
-    margin-top:70px;
     margin-bottom:70px;
   }
 
   @include for-size(tablet-landscape-up){
-    margin-top:80px;
+    margin-top: 0;
     margin-bottom:40px;
   }
 
 
-  @include for-size(dektop-up){
-    margin-top:80px;
+  @include for-size(desktop-up){
+    margin-top:40px;
     margin-bottom:80px;
   }
 
@@ -56,13 +56,10 @@
     };
 
     @include for-size(tablet-landscape-up){
-        text-align: left;
+      padding-right: 0px;
+      text-align: right;
     }
 
-
-    @include for-size(desktop-up){
-      padding: 0px;
-    };
 
   }
 
@@ -92,10 +89,6 @@
         width: 400px;
     }
 
-    @include for-size(tablet-landscape-up){
-      margin-top:40px;
-    }
-
   }
 
   .hero__right .window{
@@ -103,8 +96,8 @@
     transform-origin: 0% 0%;
     transform: scale(0.6) rotateY(-20deg);
     @include for-size(tablet-up){  transform: scale(0.8) rotateY(-20deg)}
-    @include for-size(tablet-landscape-up){  transform: scale(0.75) rotateY(-20deg)}
-    @include for-size(desktop-up){  transform: scale(1) rotateY(-20deg) }
+    @include for-size(tablet-landscape-up){  transform: scale(0.77) rotateY(-20deg)  translateX(-30px) translateY(40px)}
+    @include for-size(desktop-up){  transform: scale(1) rotateY(-20deg) translateX(-40px) }
 
     background-color: #fff;
     border-radius: 5px;
@@ -143,11 +136,10 @@
     text-align: center;
 
     @include for-size(tablet-landscape-up){
-      text-align: left;
+      text-align: right;
     }
 
     .button{
-      margin-right: 15px;
       text-align: left;
     }
   }

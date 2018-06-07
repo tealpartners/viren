@@ -533,7 +533,12 @@ a {
   position: relative;
   display: -ms-grid;
   display: grid;
-  z-index: 1; }
+  z-index: 1;
+  align-items: center;
+  height: 80px; }
+  @media (min-width: 900px) {
+    .l-header {
+      height: 100px; } }
 
 .l-header__logo {
   -ms-grid-column: 1;
@@ -703,7 +708,7 @@ a {
   margin-top: 100px; }
   @media (min-width: 900px) {
     .projects {
-      margin-top: 60px; } }
+      margin-top: 80px; } }
 
 .projects__image {
   position: relative;
@@ -875,16 +880,19 @@ a {
   margin-bottom: 0px; }
   @media (min-width: 900px) {
     .hero {
-      grid-template-columns: 1fr 1fr;
-      -ms-grid-columns: 1fr 1fr; } }
+      grid-template-columns: 0.46fr 0.54fr;
+      -ms-grid-columns: 0.46fr 0.54fr; } }
   @media (min-width: 600px) {
     .hero {
-      margin-top: 70px;
       margin-bottom: 70px; } }
   @media (min-width: 900px) {
     .hero {
-      margin-top: 80px;
+      margin-top: 0;
       margin-bottom: 40px; } }
+  @media (min-width: 1100px) {
+    .hero {
+      margin-top: 40px;
+      margin-bottom: 80px; } }
   .hero .hero__right img {
     width: 100%; }
   .hero .hero__left {
@@ -898,10 +906,8 @@ a {
         padding: 0px 40px; } }
     @media (min-width: 900px) {
       .hero .hero__left {
-        text-align: left; } }
-    @media (min-width: 1100px) {
-      .hero .hero__left {
-        padding: 0px; } }
+        padding-right: 0px;
+        text-align: right; } }
   .hero .hero__right {
     grid-row: 2;
     -ms-grid-row: 2;
@@ -923,9 +929,6 @@ a {
     @media (min-width: 600px) {
       .hero .hero__right .window-wrapper {
         width: 400px; } }
-    @media (min-width: 900px) {
-      .hero .hero__right .window-wrapper {
-        margin-top: 40px; } }
   .hero .hero__right .window {
     -ms-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
@@ -938,10 +941,10 @@ a {
         transform: scale(0.8) rotateY(-20deg); } }
     @media (min-width: 900px) {
       .hero .hero__right .window {
-        transform: scale(0.75) rotateY(-20deg); } }
+        transform: scale(0.77) rotateY(-20deg) translateX(-30px) translateY(40px); } }
     @media (min-width: 1100px) {
       .hero .hero__right .window {
-        transform: scale(1) rotateY(-20deg); } }
+        transform: scale(1) rotateY(-20deg) translateX(-40px); } }
   .hero .animation-fallback {
     -ms-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
@@ -967,9 +970,8 @@ a {
     text-align: center; }
     @media (min-width: 900px) {
       .hero .hero__buttons {
-        text-align: left; } }
+        text-align: right; } }
     .hero .hero__buttons .button {
-      margin-right: 15px;
       text-align: left; }
 
 @media all and (-ms-high-contrast: none) {
@@ -1016,6 +1018,10 @@ a {
       margin-bottom: 80px;
       margin-top: 100px; } }
   @media (min-width: 900px) {
+    .cases {
+      padding: 0px 60px;
+      grid-column-gap: 50px; } }
+  @media (min-width: 1100px) {
     .cases {
       grid-column-gap: 100px; } }
 

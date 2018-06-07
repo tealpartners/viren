@@ -13,6 +13,12 @@
   display: -ms-grid;
   display:grid;
   z-index: 1;
+  align-items: center;
+  height: 80px;
+  
+  @include for-size(tablet-landscape-up){
+      height: 100px;
+  }
 }
 
 .l-header__logo{

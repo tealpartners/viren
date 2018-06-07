@@ -12,8 +12,13 @@
     margin-bottom: 80px;
     margin-top: 100px;
   }
-  
+
   @include for-size(tablet-landscape-up){
+    padding: 0px 60px;
+    grid-column-gap:50px;
+  }
+  
+  @include for-size(desktop-up){
     grid-column-gap:100px;
   }
 }
