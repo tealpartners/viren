@@ -26,6 +26,16 @@
   justify-self: center;
 }
 
+
+/* IE execptions */
+@media all and (-ms-high-contrast:none)
+{
+    .l-header__logo{ position: relative;left: calc(50% - 100px) } /* IE10 */
+    *::-ms-backdrop, .l-header__logo{ position: relative;left: calc(50% - 100px) } /* IE11 */
+
+}
+
+
 .l-header__nav{
   -ms-grid-column: 2;
 }
