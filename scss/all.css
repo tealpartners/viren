@@ -942,6 +942,11 @@ a {
     @media (min-width: 1100px) {
       .hero .hero__right .window {
         transform: scale(1) rotateY(-20deg); } }
+  .hero .animation-fallback {
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    transform: scale(1) rotateY(-20deg);
+    box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.2); }
   .hero .hero__title {
     font-size: 24px;
     margin: 0; }

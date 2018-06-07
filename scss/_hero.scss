@@ -111,6 +111,13 @@
     box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
   }
 
+  .animation-fallback{
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    transform: scale(1) rotateY(-20deg);
+    box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
+  }
+
 
   .hero__title{
     font-size:24px;
