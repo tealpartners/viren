@@ -727,6 +727,9 @@ a {
   text-align: center;
   margin: 0px 0px 30px 0px;
   overflow: hidden; }
+  @media (min-width: 900px) {
+    .projects__image {
+      margin: 0; } }
   .projects__image img {
     width: 100%;
     position: relative; }

@@ -12,13 +12,16 @@
   margin: 0px 0px 30px 0px;
   overflow:hidden;
 
+  @include for-size(tablet-landscape-up){
+    margin: 0;
+  }
+
   img{
     width: 100%;
     @include for-size(tablet-landscape-up){
         width: 90%;
     }
     position: relative;
-
   }
 }
 
