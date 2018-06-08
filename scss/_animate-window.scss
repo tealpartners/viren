@@ -74,6 +74,13 @@ $window-border: rgba(0,0,0,0.1);
   background-size: auto 30px;
 }
 
+.v--payroll .head-viren__logoapp{
+  height: 12px;
+  width: 72px;
+  background: url(../assets/img/logo-payroll.svg) center center no-repeat;
+  background-size: auto 12px;
+}
+
 
 /* -------- APP --------- */
 
@@ -83,12 +90,15 @@ $window-border: rgba(0,0,0,0.1);
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 20% 80%;
-  -ms-grid-row:2;
-  -ms-grid-column:3;
   grid-template-rows: 20% 80%;
   border-left:1px solid $window-border;
 }
+
+.v--payroll .app{
+  grid-template-rows: 20% 41% 39%;
+}
+
+
 
 .app-window{
   -ms-grid-column-align: center;
@@ -152,6 +162,33 @@ $window-border: rgba(0,0,0,0.1);
   .block:nth-child(15){-ms-grid-row:2;-ms-grid-column: 3}
   .block:nth-child(16){-ms-grid-row:2;-ms-grid-column: 4}
 
+}
+
+.v--payroll .app-window{
+  align-self: end;
+  margin-bottom:4px;
+}
+
+.app-calcengine{
+  align-self: start;
+  align-content: center;
+  justify-content: center;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  text-align: center;
+  z-index: 20;
+
+  .box{
+    width: 92px;
+    background-color: #E8E8E8;
+    border-radius:5px;
+    color:#808080;
+    padding: 15px 10px;
+    font-size:12px;
+    font-weight: bold;
+
+  }
 }
 
 
