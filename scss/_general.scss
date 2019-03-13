@@ -1,5 +1,5 @@
 body{
-  font-family: "Enzo";
+  font-family: "Barlow", sans serif;
   color:$color-text1;
   font-size:15px;
   -webkit-font-smoothing: antialiased;
@@ -39,7 +39,7 @@ a{
   border-radius: 5px;
   text-align: center;
   line-height: 42px;
-  color: $color-text1;
+  color: #fff;
   padding: 0px 20px;
   display: inline-block;
 
@@ -54,7 +54,7 @@ a{
 
 .button__primary{
   @include button;
-  background: linear-gradient(to right, rgba(65,207,246,1) 0%,rgba(116,225,255,1) 100%);
+  background: $color-cta-alt;
   font-weight:600;
   transition: all 0.1s ease-out;
   position: relative;

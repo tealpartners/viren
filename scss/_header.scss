@@ -1,10 +1,29 @@
+$header-height-desktop: 8rem;
+$header-height-tablet: 8rem;
+$header-height-mobile: 6rem;
+
 .colorband{
   position: relative;
-  padding: 20px 0px 20px 0px;
-  background: $color-bg-babyblue;
-  background-image: url(../assets/img/repearbars.svg);
-  background-size: 1630px 1900px;
-  background-position: center center;
+  overflow: hidden;
+  background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,1));
+
+  &:after{
+    position: absolute;
+    content:"";
+    width: 1000%;
+    height: 1000%;
+    top:50%;
+    left:-10%;
+    opacity: 0.04;
+    overflow: hidden;
+    transform: rotate(-30deg);
+    transform-origin: 0;
+    background: url("../assets/img/pattern-1.png");
+    background-position: center center;
+    z-index: -1;
+    background-size: 200px auto ;
+  }
+
 }
 
 
@@ -13,74 +32,104 @@
   display: -ms-grid;
   display:grid;
   z-index: 1;
-  align-items: center;
-  height: 80px;
-  
-  @include for-size(tablet-landscape-up){
-      height: 100px;
+  grid-template-columns: auto 1fr;
+  justify-items: stretch;
+  margin: 0 2rem;
+
+  @include for-size(tablet-up){
+    margin: 0 4rem;
   }
+
+  @include for-size(desktop-up){
+    margin: 0 4rem;
+  }
+
 }
 
 .l-header__logo{
   -ms-grid-column: 1;
-  justify-self: center;
 }
-
-
-/* IE execptions */
-@media all and (-ms-high-contrast:none)
-{
-    .l-header__logo{ position: relative;left: calc(50% - 100px) } /* IE10 */
-    *::-ms-backdrop, .l-header__logo{ position: relative;left: calc(50% - 100px) } /* IE11 */
-
-}
-
 
 .l-header__nav{
   -ms-grid-column: 2;
 }
 
-.logo{
 
-  justify-self:center;
+.logo{
+  align-self: center;
+  justify-self:start;
   -ms-grid-column-align:center;
+
+  @include for-size(desktop-up){
+    justify-self:start;
+    -ms-grid-column-align:start;
+  }
+
 
   a{
     display: block;
     text-indent: -9999px;
     overflow: hidden;
-    width: 200px;
-    height:41px;
-    background: url(../assets/img/logo-viren-payroll.svg) no-repeat left center;
-    background-size: auto 41px;
+    width: 70px;
+    height:27px;
+    background: url(../assets/img/viren-logo-bluegray.svg) no-repeat center center;
+    background-size: 70px auto;
 
-    @include for-size(tablet-landscape-up){
-      background-size: auto 40px;
+    @include for-size(tablet-up){
+      width: 90px;
+      height:35px;
+      background-size: 90px auto;
+    }
+
+    @include for-size(desktop-up){
+      width: 109px;
+      height:49px;
+      background-size: 80px auto;
+      background-size: 109px auto;
     }
   }
+
+
+
 }
 
 .top-navigation{
-  display: -ms-grid;
-  display: grid;
+  justify-self: end;
+  display: -ms-inline-grid;
+  display: inline-grid;
   justify-items: stretch;
   -ms-grid-columns: 25% 25% 25% 25%;
+  grid-column-gap: 2rem;
+
+  @include for-size(desktop-up){
+    grid-column-gap: 4rem;
+  }
 }
 
 .top-navigation__item{
   text-align: center;
   align-self: center;
-  line-height: 40px;
+  line-height: $header-height-mobile;
   -ms-grid-row:1;
   grid-row:1;
+  @include for-size(tablet-up){
+    text-align: right;
+    line-height: $header-height-tablet;
+  }
+
+  @include for-size(desktop-up){
+    line-height: $header-height-desktop;
+  }
+
 }
 
+
 .top-navigation__item a{
-  color: $color-text2;
-  text-transform: uppercase;
+  color:$color-text1;
   text-decoration: none;
   font-weight: 400;
   font-size:14px;
+
   @include for-size(tablet-portrait-up){
     font-size:16px;
     font-weight:500;
@@ -92,25 +141,11 @@
 }
 
 
-.top-navigation__item.active{
-  position: relative;
-
-  &:after{
-    position: absolute;
-    content:"";
-    width: 50px;
-    height:4px;
-    left: calc(50% - 25px);
-    bottom: 0;
-    background-color: $color-brand;
-    transform: skewX(-16deg);
-  }
-
+.top-navigation__item.item--active{
+  border-top: 2px solid $color-cta-grayish;
   a{
-    font-weight: 600;
-    color:$color-text1;
+    color: $color-cta-grayish;
   }
-
 }
 
 
