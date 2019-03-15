@@ -389,15 +389,15 @@ template {
 [hidden] {
   display: none; }
 
-.l-wrapper, .projects, .cases {
+.l-wrapper, .projects, .cases, .refs {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0px 20px; }
   @media (min-width: 600px) {
-    .l-wrapper, .projects, .cases {
+    .l-wrapper, .projects, .cases, .refs {
       padding: 0px 40px; } }
   @media (min-width: 1100px) {
-    .l-wrapper, .projects, .cases {
+    .l-wrapper, .projects, .cases, .refs {
       padding: 0px; } }
 
 .l-contentcontainer, .page__content {
@@ -1012,7 +1012,7 @@ a {
     .cases__heading {
       margin-bottom: 40px; } }
   .cases__heading span {
-    background-color: #D3F5EF;
+    background-color: #F2F8FB;
     font-size: 15px;
     color: #2B2B2B;
     padding: 8px 20px;
@@ -1497,7 +1497,7 @@ a {
     -ms-transform: rotate(-360deg);
     transform: rotate(-360deg); } }
 .footer {
-  background-color: #D3F5EF; }
+  background-color: #F2F8FB; }
   @media (min-width: 600px) {
     .footer {
       background-image: url(../assets/img/footer-decoreator.svg);
@@ -1598,5 +1598,71 @@ a {
     padding-left: 40px; }
 
   /* IE11 */ }
+.refs {
+  margin-top: 60px;
+  margin-bottom: 20px; }
+  @media (min-width: 900px) {
+    .refs {
+      margin-top: 70px;
+      background-color: transparent; } }
+  .refs:hover .refs__strip {
+    opacity: 1;
+    filter: grayscale(0%); }
+
+.refs__title {
+  font-size: 20px;
+  color: #006580;
+  opacity: 0.4;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0px 0px 40px 0px; }
+
+.refs__strip {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  opacity: 0.4;
+  transition: all 0.4s ease; }
+  .refs__strip:hover .refs__strip {
+    opacity: 1;
+    filter: grayscale(0%); }
+
+.refs__logo {
+  text-align: center;
+  width: 50%; }
+  @media (min-width: 900px) {
+    .refs__logo {
+      width: auto; } }
+  .refs__logo.logo__wolters img {
+    width: 115px; }
+  .refs__logo.logo__sd img {
+    width: 70px; }
+  .refs__logo.logo__q8 img {
+    width: 36px; }
+  .refs__logo.logo__unbox img {
+    width: 78px; }
+  @media (min-width: 600px) {
+    .refs__logo.logo__wolters img {
+      width: 162px;
+      height: 38px; }
+    .refs__logo.logo__sd img {
+      width: 98px;
+      height: 35px; }
+    .refs__logo.logo__q8 img {
+      width: 50px;
+      height: 38px; }
+    .refs__logo.logo__unbox img {
+      width: 110px;
+      height: 29px; } }
+
+.refs-bar__logo:nth-child(1), .refs__logo:nth-child(2) {
+  margin-bottom: 20px; }
+  @media (min-width: 900px) {
+    .refs-bar__logo:nth-child(1), .refs__logo:nth-child(2) {
+      margin-bottom: 0px; } }
 
 /*# sourceMappingURL=all.css.map */
