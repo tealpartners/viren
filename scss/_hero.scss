@@ -50,7 +50,7 @@
 
   @include for-size(tablet-up){
     max-width: 80%;
-    padding-top: 13rem;
+    padding-top: 30%;
     margin: 2rem auto;
     background: url(../assets/img/hero-image-desktop.svg) top center no-repeat;
     background-size: 100% auto;
@@ -60,7 +60,6 @@
   @include for-size(desktop-up){
     margin: 4rem auto;
     max-width: 50rem;
-    padding-top: 17rem;
     grid-column-gap: 4rem;
   }
 

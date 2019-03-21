@@ -906,7 +906,7 @@ a {
   @media (min-width: 600px) {
     .hero-image {
       max-width: 80%;
-      padding-top: 13rem;
+      padding-top: 30%;
       margin: 2rem auto;
       background: url(../assets/img/hero-image-desktop.svg) top center no-repeat;
       background-size: 100% auto;
@@ -915,7 +915,6 @@ a {
     .hero-image {
       margin: 4rem auto;
       max-width: 50rem;
-      padding-top: 17rem;
       grid-column-gap: 4rem; } }
   .hero-image__one, .hero-image__two, .hero-image__three {
     position: relative; }
@@ -1497,33 +1496,28 @@ a {
     -ms-transform: rotate(-360deg);
     transform: rotate(-360deg); } }
 .footer {
-  background-color: #F2F8FB; }
+  background-color: #F3F3F3; }
+
+.footer__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-row-gap: 60px; }
   @media (min-width: 600px) {
-    .footer {
-      background-image: url(../assets/img/footer-decoreator.svg);
-      background-size: 370px 975px;
-      background-position: center center;
-      background-repeat: no-repeat; } }
-  .footer .footer__wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
-    display: grid;
-    display: -ms-grid;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    grid-row-gap: 60px; }
-    @media (min-width: 600px) {
-      .footer .footer__wrapper {
-        padding-top: 60px;
-        padding-bottom: 60px;
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 60px; } }
-    @media (min-width: 1100px) {
-      .footer .footer__wrapper {
-        padding: 100px 0px 100px 0px;
-        grid-column-gap: 300px; } }
+    .footer__wrapper {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 60px; } }
+  @media (min-width: 1100px) {
+    .footer__wrapper {
+      padding: 100px 0px 100px 0px;
+      grid-column-gap: 300px; } }
 
 .footer__contact {
   -ms-grid-column: 1; }
@@ -1599,8 +1593,12 @@ a {
 
   /* IE11 */ }
 .refs {
+  max-width: 60rem;
   margin-top: 60px;
-  margin-bottom: 20px; }
+  margin-bottom: 3rem; }
+  @media (min-width: 600px) {
+    .refs {
+      margin-bottom: 5rem; } }
   @media (min-width: 900px) {
     .refs {
       margin-top: 70px;
@@ -1611,58 +1609,41 @@ a {
 
 .refs__title {
   font-size: 20px;
-  color: #006580;
-  opacity: 0.4;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  color: #2B2B2B;
+  font-weight: 600;
   text-align: center;
-  margin: 0px 0px 40px 0px; }
+  margin: 0px 0px 25px 0px; }
 
 .refs__strip {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-around;
-  opacity: 0.5;
-  filter: grayscale(100%);
-  opacity: 0.4;
-  transition: all 0.4s ease; }
-  .refs__strip:hover .refs__strip {
-    opacity: 1;
-    filter: grayscale(0%); }
+  display: -ms-grid;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr; }
 
 .refs__logo {
-  text-align: center;
-  width: 50%; }
-  @media (min-width: 900px) {
-    .refs__logo {
-      width: auto; } }
-  .refs__logo.logo__wolters img {
-    width: 115px; }
+  text-align: center; }
   .refs__logo.logo__sd img {
     width: 70px; }
-  .refs__logo.logo__q8 img {
-    width: 36px; }
-  .refs__logo.logo__unbox img {
+  .refs__logo.logo__bexpertive img {
+    width: 90px;
+    margin-top: 3px; }
+  .refs__logo.logo__xerius img {
     width: 78px; }
   @media (min-width: 600px) {
-    .refs__logo.logo__wolters img {
-      width: 162px;
-      height: 38px; }
     .refs__logo.logo__sd img {
       width: 98px;
       height: 35px; }
-    .refs__logo.logo__q8 img {
-      width: 50px;
-      height: 38px; }
-    .refs__logo.logo__unbox img {
-      width: 110px;
-      height: 29px; } }
+    .refs__logo.logo__bexpertive img {
+      width: 150px; }
+    .refs__logo.logo__xerius img {
+      width: 78px; } }
 
-.refs-bar__logo:nth-child(1), .refs__logo:nth-child(2) {
-  margin-bottom: 20px; }
-  @media (min-width: 900px) {
-    .refs-bar__logo:nth-child(1), .refs__logo:nth-child(2) {
-      margin-bottom: 0px; } }
+.logo__bexpertive {
+  margin-top: 3px; }
+
+@media (min-width: 900px) {
+  .refs-bar__logo:nth-child(1), .refs__logo:nth-child(2) {
+    margin-bottom: 0px; } }
 
 /*# sourceMappingURL=all.css.map */

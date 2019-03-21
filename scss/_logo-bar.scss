@@ -1,8 +1,13 @@
 .refs{
   @extend .l-wrapper;
 
+  max-width: 60rem;
+
   margin-top:60px;
-  margin-bottom:20px;
+  margin-bottom:3rem;
+  @include for-size(tablet-up){
+    margin-bottom: 5rem;
+  }
 
 
   @include for-size(tablet-landscape-up){
@@ -21,56 +26,44 @@
 
 .refs__title{
   font-size:20px;
-  color: $color-brand-dark;
-  opacity: 0.4;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  color: $color-text1;
+  font-weight: 600;
   text-align: center;
-  margin: 0px 0px 40px 0px;
+  margin: 0px 0px 25px 0px;
 }
 
 .refs__strip{
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-around;
-  opacity: 0.5;
-  filter:grayscale(100%);
-  opacity: 0.4;
-  transition: all 0.4s ease;
-
-  &:hover{
-    .refs__strip{
-      opacity: 1;
-      filter:grayscale(0%);
-    }
-  }
+  display: -ms-grid;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .refs__logo{
   text-align: center;
-  width: 50%;
-  @include for-size(tablet-landscape-up){
-    width: auto;
-  }
 
-  &.logo__wolters img{width: 115px; }
-  &.logo__sd img{width: 70px;}
-  &.logo__q8 img{width: 36px; }
-  &.logo__unbox img{width: 78px;}
+  &.logo__sd img{width: 70px; }
+  &.logo__bexpertive img{width: 90px; margin-top: 3px;}
+  &.logo__xerius img{width: 78px;}
 
 
   @include for-size(tablet-up){
-    &.logo__wolters img{width: 162px; height: 38px;}
     &.logo__sd img{width: 98px; height: 35px}
-    &.logo__q8 img{width: 50px; height: 38px;  }
-    &.logo__unbox img{width: 110px; height: 29px;}
+    &.logo__bexpertive img{width: 150px;}
+    &.logo__xerius img{width: 78px;}
   }
 
 }
 
+.logo__bexpertive{
+  margin-top: 3px;
+
+}
+
+
 .refs-bar__logo:nth-child(1), .refs__logo:nth-child(2){
-  margin-bottom:20px;
+
   @include for-size(tablet-landscape-up){
     margin-bottom:0px;
   }
