@@ -1,6 +1,6 @@
-$header-height-desktop: 8rem;
-$header-height-tablet: 8rem;
-$header-height-mobile: 6rem;
+$header-height-desktop: 140px;
+$header-height-tablet: 100px;
+$header-height-mobile: 80px;
 
 .colorband{
   position: relative;
@@ -34,14 +34,14 @@ $header-height-mobile: 6rem;
   z-index: 1;
   grid-template-columns: auto 1fr;
   justify-items: stretch;
-  margin: 0 2rem;
+  margin: 0 30px;
 
   @include for-size(tablet-up){
-    margin: 0 4rem;
+    margin: 0 40px;
   }
 
   @include for-size(desktop-up){
-    margin: 0 4rem;
+    margin: 0 60px;
   }
 
 }
@@ -72,7 +72,7 @@ $header-height-mobile: 6rem;
     overflow: hidden;
     width: 70px;
     height:27px;
-    background: url(../assets/img/viren-logo-bluegray.svg) no-repeat center center;
+    background: url(../assets/img/logos/viren-logo-bluegray.svg) no-repeat center center;
     background-size: 70px auto;
 
     @include for-size(tablet-up){
@@ -99,10 +99,14 @@ $header-height-mobile: 6rem;
   display: inline-grid;
   justify-items: stretch;
   -ms-grid-columns: 25% 25% 25% 25%;
-  grid-column-gap: 2rem;
+  grid-column-gap: 30px;
+
+  @include for-size(tablet-up){
+    grid-column-gap: 40px;
+  }
 
   @include for-size(desktop-up){
-    grid-column-gap: 4rem;
+    grid-column-gap: 60px;
   }
 }
 

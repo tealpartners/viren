@@ -1,13 +1,16 @@
 .hero {
+  @include margin-section;
   text-align: center;
 }
 
 .hero__title{
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 24px;
+  @include for-size(tablet-up){
+    font-size: 34px;
+  }
   @include for-size(desktop-up){
-    margin-top: 3rem;
-    font-size: 3rem;
+    font-size: 40px;
   }
 }
 
@@ -16,19 +19,26 @@
   color: $color-text2;
   font-weight:300;
 
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
+  margin-top: 15px;
+  font-size: 20px;
   max-width: 100%;
   @include for-size(desktop-up){
-    margin-top: 2rem;
-    font-size: 1.7rem;
+    margin-top: 20px;
+    font-size: 27px;
     padding: 0 10%;
   }
 
 }
 
 .hero__buttons{
-  margin-top: 2rem;
+  margin-top: 20px;
+  @include for-size(tablet-up){
+    margin-top: 30px;
+  }
+
+
+
+
   a{
     cursor: pointer;
   }
@@ -37,34 +47,45 @@
 
 
 .hero-image{
+  @include margin-section;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
   text-align: center;
   font-weight: 300;
   font-style: italic;
+  margin: 40px;
 
-  margin: 2rem 1rem 0 1rem;
-  background: url(../assets/img/hero-image-mobile.svg) top center no-repeat;
-  background-size: 100% auto;
-  padding-top: 10rem;
-
-  @include for-size(tablet-up){
-    max-width: 80%;
-    padding-top: 30%;
-    margin: 2rem auto;
-    background: url(../assets/img/hero-image-desktop.svg) top center no-repeat;
-    background-size: 100% auto;
-    grid-column-gap: 3rem;
-  }
 
   @include for-size(desktop-up){
-    margin: 4rem auto;
-    max-width: 50rem;
-    grid-column-gap: 4rem;
+    margin: 80px auto 40px auto;
+    max-width: 1200px;
+    grid-column-gap: 40px;
+    font-size: 19px;
+  }
+
+  &__visual{
+    grid-row: 1;
+    grid-column: 1 / span 3;
+
+    img{
+       width: 100%;
+     }
+
+    .visual--desktop{
+      display: none;
+    }
+
+    @include for-size(tablet-up){
+      .visual--desktop{display: block;}
+      .visual--mobile{display: none;}
+    }
+
   }
 
   &__one, &__two, &__three{
     position: relative;
+    grid-row: 2;
   }
 
   &__one:after, &__two:after, &__three:after{
