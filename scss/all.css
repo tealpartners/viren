@@ -426,20 +426,14 @@ template {
   @media (min-width: 600px) {
     .l-wrapper, .projects, .cases {
       padding: 0px 40px; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .l-wrapper, .projects, .cases {
       padding: 0px; } }
 
 .l-contentcontainer, .page__content {
   margin: 0 auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 40px);
   max-width: 880px; }
-  @media (min-width: 600px) {
-    .l-contentcontainer, .page__content {
-      width: calc(100% - 180px); } }
-  @media (min-width: 600px) {
-    .l-contentcontainer, .page__content {
-      width: calc(100% - 180px); } }
 
 body {
   font-family: "Enzo";
@@ -559,10 +553,10 @@ a {
 .l-header__nav {
   -ms-grid-column: 2; }
 
-.logo {
+.logo, .logo--2 {
   justify-self: center;
   -ms-grid-column-align: center; }
-  .logo a {
+  .logo a, .logo--2 a {
     display: block;
     text-indent: -9999px;
     overflow: hidden;
@@ -571,8 +565,12 @@ a {
     background: url(../assets/img/logo-viren-payroll.svg) no-repeat left center;
     background-size: auto 41px; }
     @media (min-width: 900px) {
-      .logo a {
+      .logo a, .logo--2 a {
         background-size: auto 40px; } }
+
+.logo--2 a {
+  width: 92px;
+  background: url(../assets/img/viren-logo.svg) no-repeat left center; }
 
 .top-navigation {
   display: -ms-grid;
@@ -597,7 +595,7 @@ a {
     .top-navigation__item a {
       font-size: 16px;
       font-weight: 500; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .top-navigation__item a {
       font-size: 18px; } }
 
@@ -657,7 +655,7 @@ a {
   @media (min-width: 600px) {
     .page__header {
       padding: 50px 50px 20px 50px; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .page__header {
       padding: 70px 70px 30px 70px; } }
 
@@ -667,7 +665,7 @@ a {
   @media (min-width: 600px) {
     .page__title {
       font-size: 24px; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .page__title {
       font-size: 30px; } }
 
@@ -679,7 +677,7 @@ a {
   @media (min-width: 600px) {
     .page__intro {
       font-size: 20px; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .page__intro {
       font-size: 22px; } }
 
@@ -904,7 +902,7 @@ a {
     .hero {
       margin-top: 0;
       margin-bottom: 40px; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .hero {
       margin-top: 40px;
       margin-bottom: 80px; } }
@@ -957,7 +955,7 @@ a {
     @media (min-width: 900px) {
       .hero .hero__right .window {
         transform: scale(0.77) rotateY(-20deg) translateX(-30px) translateY(40px); } }
-    @media (min-width: 1100px) {
+    @media (min-width: 1280px) {
       .hero .hero__right .window {
         transform: scale(1) rotateY(-20deg) translateX(-40px); } }
   .hero .animation-fallback {
@@ -1036,7 +1034,7 @@ a {
     .cases {
       padding: 0px 60px;
       grid-column-gap: 50px; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .cases {
       grid-column-gap: 100px; } }
 
@@ -1599,7 +1597,7 @@ a {
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 60px; } }
-    @media (min-width: 1100px) {
+    @media (min-width: 1280px) {
       .footer .footer__wrapper {
         padding: 100px 0px 100px 0px;
         grid-column-gap: 300px; } }
@@ -1616,7 +1614,7 @@ a {
   @media (min-width: 600px) {
     .footer__title {
       font-size: 28px; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .footer__title {
       font-size: 40px; } }
 
@@ -1628,7 +1626,7 @@ a {
   @media (min-width: 900px) {
     .footer__text {
       font-size: 18px; } }
-  @media (min-width: 1100px) {
+  @media (min-width: 1280px) {
     .footer__text {
       font-size: 20px; } }
 
@@ -1677,5 +1675,17 @@ a {
     padding-left: 40px; }
 
   /* IE11 */ }
+.metafooter {
+  text-align: center;
+  height: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 50px; }
+  .metafooter a {
+    font-size: 15px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5); }
+    .metafooter a:hover {
+      text-decoration: underline;
+      color: rgba(0, 0, 0, 0.8); }
 
 /*# sourceMappingURL=all.css.map */

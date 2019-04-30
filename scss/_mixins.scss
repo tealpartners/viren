@@ -1,7 +1,7 @@
 @mixin for-size($range) {
   $phone-upper-boundary: 600px;
   $tablet-portrait-upper-boundary: 900px;
-  $tablet-landscape-upper-boundary: 1100px;
+  $tablet-landscape-upper-boundary: 1280px;
 
   @if $range == phone-only {
     @media (max-width: #{$phone-upper-boundary - 1}) { @content; }

@@ -13,14 +13,11 @@
 
 .l-contentcontainer{
   margin: 0 auto;
-  width: calc(100% - 100px);
+  width: calc(100% - 40px);
   max-width: 880px;
 
-  @include for-size(tablet-up){
-    width: calc(100% - 180px);
-  }
+}
 
-  @include for-size(tablet-up){
-    width: calc(100% - 180px);
-  }
+
+.page-home{
 }

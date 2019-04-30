@@ -14,7 +14,6 @@
   .footer__wrapper{
     max-width: $maxwidth;
     margin: 0 auto;
-
     padding: 40px;
 
     display: grid;
@@ -128,6 +127,22 @@
   .footer__about{ padding-left: 40px; } /* IE10 */
   *::-ms-backdrop, .footer__contact{ padding-left: 40px; } /* IE11 */
 
+}
+
+.metafooter{
+    text-align: center;
+    height: 50px;
+    border-top:1px solid rgba(0,0,0,0.1);
+    line-height: 50px;
+    a{
+        font-size: 15px;
+        text-decoration: none;
+        color:rgba(0,0,0,0.5);
+        &:hover{
+            text-decoration: underline;
+            color:rgba(0,0,0,0.8);
+        }
+    }
 }
 
 

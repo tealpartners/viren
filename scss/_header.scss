@@ -60,6 +60,15 @@
   }
 }
 
+.logo--2{
+    @extend .logo;
+    a{
+        width: 92px;
+        background: url(../assets/img/viren-logo.svg) no-repeat left center;
+    }
+
+}
+
 .top-navigation{
   display: -ms-grid;
   display: grid;
