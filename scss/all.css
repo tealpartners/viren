@@ -879,14 +879,7 @@ a {
     .projects__case:nth-child(even) *::-ms-backdrop, .projects__case:nth-child(even) .projects__image {
       padding-left: 60px; } }
 .hero {
-  margin-top: 40px;
   text-align: center; }
-  @media (min-width: 600px) {
-    .hero {
-      margin-top: 80px; } }
-  @media (min-width: 1100px) {
-    .hero {
-      margin-top: 100px; } }
 
 .hero__title {
   margin: 0;
