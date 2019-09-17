@@ -1696,7 +1696,7 @@ a {
 body {
   font-size: 1.1rem !important; }
 
-a, a:hover, a:focus, a:visited {
+a.viren-link, a.viren-link:hover, a.viren-link:focus, a.viren-link:visited {
   color: #359AB6 !important;
   text-decoration: none !important; }
 
