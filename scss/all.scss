@@ -157,3 +157,9 @@ a.viren-link {
     margin-left: auto;
     margin-right: auto;
 }
+
+.viren-body {
+    &.hero {
+        grid-template-columns: 1fr;
+    }
+}

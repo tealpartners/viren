@@ -105,9 +105,9 @@
   }
 
   .animation-fallback{
-    -ms-transform-origin: 0% 0%;
-    transform-origin: 0% 0%;
-    transform: scale(1) rotateY(-20deg);
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    transform: scale(1.2) rotateY(-20deg);
     box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
   }
 
