@@ -68,18 +68,9 @@ $window-border: rgba(0,0,0,0.1);
 }
 
 .head-viren__logoapp{
-  height: 30px;
-  width: 200px;
-  background: url(../assets/img/viren-app-logo.svg) center center no-repeat;
-  background-size: auto 30px;
+    color:$color-text3;
 }
 
-.v--payroll .head-viren__logoapp{
-  height: 12px;
-  width: 72px;
-  background: url(../assets/img/logo-payroll.svg) center center no-repeat;
-  background-size: auto 12px;
-}
 
 
 /* -------- APP --------- */
@@ -311,8 +302,8 @@ $window-border: rgba(0,0,0,0.1);
       &:after{
         position: absolute;
         content:'';
-        width: 6px;
-        height:6px;
+        width: 10px;
+        height:10px;
         left:-4px;
         top: -4px;
         background-color: #fff;
@@ -534,4 +525,17 @@ $window-border: rgba(0,0,0,0.1);
     -ms-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
+}
+
+.no--payrollengine{
+    .app{
+        grid-template-rows: 20% 80%;
+    }
+    .app-calcengine{
+        display: none;
+    }
+
+    .app-window{
+        align-self: center;
+    }
 }
