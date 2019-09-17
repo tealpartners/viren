@@ -29,11 +29,9 @@ body {
     font-size: 1.1rem !important;
 }
 
-a.viren-link {
-    &, &:hover, &:focus, &:visited {
-        color: $link-color !important;
-        text-decoration: none !important;    
-    }
+a, a:hover, a:focus, a:visited {
+    color: $link-color !important;
+    text-decoration: none !important;
 }
 
 .new-colorband {
