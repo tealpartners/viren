@@ -1770,4 +1770,9 @@ a.viren-link, a.viren-link:hover, a.viren-link:focus, a.viren-link:visited {
 .footer__cta .value {
   color: #359AB6; }
 
+.viren-navbar, .viren-hero, .viren-body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+
 /*# sourceMappingURL=all.css.map */

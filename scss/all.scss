@@ -150,5 +150,10 @@ a.viren-link {
       color: $link-color;
     }
   
-  }
-  
+}
+
+.viren-navbar, .viren-hero, .viren-body {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
