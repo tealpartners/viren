@@ -442,7 +442,7 @@ template {
   max-width: 880px; }
 
 body {
-  font-family: "Barlow" -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: "Barlow", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   color: rgba(0, 0, 0, 0.85);
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
@@ -966,6 +966,16 @@ a {
     @media (min-width: 1280px) {
       .hero .hero__right .window {
         transform: scale(1) rotateY(-20deg) translateX(-40px); } }
+    @supports (-ms-ime-align: auto) {
+      @media (min-width: 600px) {
+        .hero .hero__right .window {
+          transform: scale(0.8) rotateY(-20deg); } }
+      @media (min-width: 900px) {
+        .hero .hero__right .window {
+          transform: scale(0.77) rotateY(-20deg) translateX(80px) translateY(40px); } }
+      @media (min-width: 1280px) {
+        .hero .hero__right .window {
+          transform: scale(1) rotateY(-20deg) translateX(100px); } } }
   .hero .animation-fallback {
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
