@@ -1,3 +1,5 @@
+
+
 .hero{
 
   max-width: $maxwidth;
@@ -98,6 +100,14 @@
     @include for-size(tablet-up){  transform: scale(0.8) rotateY(-20deg)}
     @include for-size(tablet-landscape-up){  transform: scale(0.77) rotateY(-20deg)  translateX(-30px) translateY(40px)}
     @include for-size(desktop-up){  transform: scale(1) rotateY(-20deg) translateX(-40px) }
+
+@supports (-ms-ime-align:auto) {
+    
+    @include for-size(tablet-up){  transform: scale(0.8) rotateY(-20deg)}
+    @include for-size(tablet-landscape-up){  transform: scale(0.77) rotateY(-20deg)  translateX(80px) translateY(40px)}
+    @include for-size(desktop-up){  transform: scale(1) rotateY(-20deg) translateX(100px) }
+    
+}
 
     background-color: #fff;
     border-radius: 5px;
