@@ -1,7 +1,4 @@
-
-
-.hero{
-
+.hero {
   max-width: $maxwidth;
   margin: 0 auto;
 
@@ -11,8 +8,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
 
-
-  @include for-size(tablet-landscape-up){
+  @include for-size(tablet-landscape-up) {
     grid-template-columns: 0.46fr 0.54fr;
     -ms-grid-columns: 0.46fr 0.54fr;
   }
@@ -23,115 +19,123 @@
   -ms-flex-align: center;
   align-items: center;
 
-  margin-top:40px;
-  margin-bottom:0px;
+  margin-top: 40px;
+  margin-bottom: 0px;
 
-  @include for-size(tablet-up){
-    margin-bottom:70px;
+  @include for-size(tablet-up) {
+    margin-bottom: 70px;
   }
 
-  @include for-size(tablet-landscape-up){
+  @include for-size(tablet-landscape-up) {
     margin-top: 0;
-    margin-bottom:40px;
+    margin-bottom: 40px;
   }
 
-
-  @include for-size(desktop-up){
-    margin-top:40px;
-    margin-bottom:80px;
+  @include for-size(desktop-up) {
+    margin-top: 40px;
+    margin-bottom: 80px;
   }
 
-
-  .hero__right img{
-      width: 100%;
+  .hero__right img {
+    width: 100%;
   }
 
-  .hero__left{
-    grid-row:1;
-    -ms-grid-row:1;
+  .hero__left {
+    grid-row: 1;
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
     text-align: center;
     padding: 0px 20px;
 
-    @include for-size(tablet-portrait-up){
+    @include for-size(tablet-portrait-up) {
       padding: 0px 40px;
-    };
+    }
 
-    @include for-size(tablet-landscape-up){
+    @include for-size(tablet-landscape-up) {
       padding-right: 0px;
       text-align: right;
     }
-
-
   }
 
-  .hero__right{
+  .hero__right {
     grid-row: 2;
     -ms-grid-row: 2;
     margin-top: 40px;
-    margin-bottom:-180px;
+    margin-bottom: -180px;
     -ms-flex-item-align: start;
     -ms-grid-row-align: start;
     align-self: start;
     perspective: 2000px;
 
-    @include for-size(tablet-landscape-up){
+    * {
+      transform-style: preserve-3d;
+    }
+
+    @include for-size(tablet-landscape-up) {
       margin-top: 0;
-      grid-row:1;
-      -ms-grid-row:1;
+      grid-row: 1;
+      -ms-grid-row: 1;
       -ms-grid-column: 2;
-      margin-bottom:0;
+      margin-bottom: 0;
     }
   }
 
-  .hero__right .window-wrapper{
-    width:320px;
+  .hero__right .window-wrapper {
+    width: 320px;
 
-    @include for-size(tablet-up){
-        width: 400px;
+    @include for-size(tablet-up) {
+      width: 400px;
     }
-
   }
 
-  .hero__right .window{
+  .hero__right .window {
     -ms-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
     transform: scale(0.6) rotateY(-20deg);
-    @include for-size(tablet-up){  transform: scale(0.8) rotateY(-20deg)}
-    @include for-size(tablet-landscape-up){  transform: scale(0.77) rotateY(-20deg)  translateX(-30px) translateY(40px)}
-    @include for-size(desktop-up){  transform: scale(1) rotateY(-20deg) translateX(-40px) }
+    @include for-size(tablet-up) {
+      transform: scale(0.8) rotateY(-20deg);
+    }
+    @include for-size(tablet-landscape-up) {
+      transform: scale(0.77) rotateY(-20deg) translateX(-30px) translateY(40px);
+    }
+    @include for-size(desktop-up) {
+      transform: scale(1) rotateY(-20deg) translateX(-40px);
+    }
 
-@supports (-ms-ime-align:auto) {
-    
-    @include for-size(tablet-up){  transform: scale(0.8) rotateY(-20deg)}
-    @include for-size(tablet-landscape-up){  transform: scale(0.77) rotateY(-20deg)  translateX(80px) translateY(40px)}
-    @include for-size(desktop-up){  transform: scale(1) rotateY(-20deg) translateX(100px) }
-    
-}
+    @supports (-ms-ime-align: auto) {
+      @include for-size(tablet-up) {
+        transform: scale(0.8) rotateY(-20deg);
+      }
+      @include for-size(tablet-landscape-up) {
+        transform: scale(0.77) rotateY(-20deg) translateX(80px) translateY(40px);
+      }
+      @include for-size(desktop-up) {
+        transform: scale(1) rotateY(-20deg) translateX(100px);
+      }
+    }
 
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
+    box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.2);
   }
 
-  .animation-fallback{
+  .animation-fallback {
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     transform: scale(1.2) rotateY(-20deg);
-    box-shadow: 40px 40px 80px rgba(0,0,0,0.2);
+    box-shadow: 40px 40px 80px rgba(0, 0, 0, 0.2);
   }
 
-
-  .hero__title{
-    font-size:24px;
+  .hero__title {
+    font-size: 24px;
     margin: 0;
     @include for-size(tablet-portrait-up) {
       font-size: 30px;
     }
   }
 
-  .hero__description{
-    font-size:17px;
+  .hero__description {
+    font-size: 17px;
     line-height: 24px;
     color: $color-text2;
     margin-top: 30px;
@@ -141,37 +145,36 @@
     }
   }
 
-  .hero__buttons{
+  .hero__buttons {
     margin-top: 30px;
     text-align: center;
 
-    @include for-size(tablet-landscape-up){
+    @include for-size(tablet-landscape-up) {
       text-align: right;
     }
 
-    .button{
+    .button {
       text-align: left;
     }
   }
 }
 
-@media all and (-ms-high-contrast:none) {
-  .hero__left{
+@media all and (-ms-high-contrast: none) {
+  .hero__left {
     padding-right: 50px;
   }
 }
 
-.animation-fallback img{
+.animation-fallback img {
   width: 100%;
   display: none;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .animation-fallback img{
+  .animation-fallback img {
     display: block;
   }
 }
-
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   html body .window {
@@ -180,12 +183,20 @@
 }
 
 /* IE execptions */
-@media all and (-ms-high-contrast:none)
-{
-  .hero .hero__left{ padding-right: 20px; } /* IE10 */
-  *::-ms-backdrop, .hero .hero__left{ padding-right: 40px; } /* IE11 */
+@media all and (-ms-high-contrast: none) {
+  .hero .hero__left {
+    padding-right: 20px;
+  } /* IE10 */
+  *::-ms-backdrop,
+  .hero .hero__left {
+    padding-right: 40px;
+  } /* IE11 */
 
-  .hero .hero__right{ padding-left: 20px; } /* IE10 */
-  *::-ms-backdrop, .hero .hero__right{ padding-left: 20px; } /* IE11 */
-
+  .hero .hero__right {
+    padding-left: 20px;
+  } /* IE10 */
+  *::-ms-backdrop,
+  .hero .hero__right {
+    padding-left: 20px;
+  } /* IE11 */
 }

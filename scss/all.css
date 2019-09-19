@@ -938,6 +938,8 @@ a {
     -ms-grid-row-align: start;
     align-self: start;
     perspective: 2000px; }
+    .hero .hero__right * {
+      transform-style: preserve-3d; }
     @media (min-width: 900px) {
       .hero .hero__right {
         margin-top: 0;
@@ -1026,13 +1028,15 @@ a {
   .hero .hero__left {
     padding-right: 20px; }
   /* IE10 */
-  *::-ms-backdrop, .hero .hero__left {
+  *::-ms-backdrop,
+  .hero .hero__left {
     padding-right: 40px; }
   /* IE11 */
   .hero .hero__right {
     padding-left: 20px; }
   /* IE10 */
-  *::-ms-backdrop, .hero .hero__right {
+  *::-ms-backdrop,
+  .hero .hero__right {
     padding-left: 20px; }
   /* IE11 */ }
 
@@ -1703,11 +1707,14 @@ a {
       text-decoration: underline;
       color: rgba(0, 0, 0, 0.8); }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-size: 1.1rem !important; }
 
 a.viren-link, a.viren-link:hover, a.viren-link:focus, a.viren-link:visited {
-  color: #359AB6 !important;
+  color: #359ab6 !important;
   text-decoration: none !important; }
 
 .new-colorband {
@@ -1723,7 +1730,7 @@ a.viren-link, a.viren-link:hover, a.viren-link:focus, a.viren-link:visited {
 .viren-nav a {
   display: inline-block; }
   .viren-nav a, .viren-nav a:hover, .viren-nav a:focus, .viren-nav a:visited {
-    color: #2B2B2B;
+    color: #2b2b2b;
     text-decoration: none; }
   .viren-nav a.active {
     color: #136277;
@@ -1754,11 +1761,11 @@ a.viren-link, a.viren-link:hover, a.viren-link:focus, a.viren-link:visited {
     width: 75px; }
   .viren-features p {
     font-size: 1.3rem;
-    color: #697C81; }
+    color: #697c81; }
 
 .btn-secondary {
-  background-color: #E4E4E4 !important;
-  border-color: #E4E4E4 !important;
+  background-color: #e4e4e4 !important;
+  border-color: #e4e4e4 !important;
   color: #212529 !important; }
   .btn-secondary:hover {
     background-color: #cbcbcb !important; }
@@ -1775,12 +1782,14 @@ a.viren-link, a.viren-link:hover, a.viren-link:focus, a.viren-link:visited {
   font-weight: 700; }
 
 .footer__cta .label {
-  color: #8FA8AE; }
+  color: #8fa8ae; }
 
 .footer__cta .value {
-  color: #359AB6; }
+  color: #359ab6; }
 
-.viren-navbar, .viren-hero, .viren-body {
+.viren-navbar,
+.viren-hero,
+.viren-body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
