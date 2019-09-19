@@ -92,6 +92,7 @@ $window-border: rgba(0,0,0,0.1);
 
 
 .app-window{
+  position: relative;
   -ms-grid-column-align: center;
   justify-self: center;
   -ms-flex-item-align: center;
@@ -208,6 +209,7 @@ $window-border: rgba(0,0,0,0.1);
 
 
 .blockwrapper{
+
   -ms-transform:skewX(-16deg);
   transform:skewX(-16deg);
   width: 110px;
