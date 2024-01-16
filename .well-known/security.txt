@@ -1,6 +1,6 @@
 Contact: mailto:security@tealpartners.com
 Expires: 2999-12-31T23:59:59.000Z
 Preferred-Languages: en, nl
-Policy: https://www.tealpartners.com/responsible-disclosure-policy.html
+Policy: https://www.tealpartners.com/en/legal/responsible-disclosure-policy.html
 Canonical: https://www.tealpartners.com/.well-known/security.txt
 Hiring: https://www.tealpartners.com/en/careers/
